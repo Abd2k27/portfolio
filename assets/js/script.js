@@ -190,3 +190,27 @@ filterBtns.forEach(btn => {
     filterProjects(selectedCategory);
   });
 });
+
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+// Add event listeners to all form inputs
+formInputs.forEach(input => {
+  input.addEventListener('input', () => {
+    // Check if the form is valid
+    if (form.checkValidity()) {
+      formBtn.removeAttribute('disabled');
+    } else {
+      formBtn.setAttribute('disabled', '');
+    }
+  });
+});
+
+// Optional: Handle form submission (replace # with your actual backend endpoint)
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Form submitted successfully!');
+  form.reset(); // Reset the form after submission
+  formBtn.setAttribute('disabled', ''); // Disable the button again
+});
