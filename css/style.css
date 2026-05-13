@@ -37,7 +37,7 @@ html { font-size:106%; scroll-behavior:smooth; scroll-padding-top:85px; }
 body {
   background:var(--bg);
   color:var(--text);
-  font-family:var(--font-hand);
+  font-family:var(--font-b);
   line-height:1.6;
   overflow-x:hidden;
   /* subtle paper texture */
