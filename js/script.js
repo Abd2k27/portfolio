@@ -214,7 +214,8 @@ const modalData = {
       <li>SAR-inspired probability modeling</li>
       <li>LLM-powered natural language geolocation queries</li>
       <li>RAG pipeline for contextual document retrieval</li>
-    </ul>`,
+    </ul>
+    <p><a href="https://abd2k27.github.io/Finder_bot/" target="_blank" class="accent" style="font-weight:700; text-decoration:underline;">View Live Demo ↗</a></p>`,
     skills: ["Python", "JavaScript", "LLM", "RAG", "Graph DB", "SAR", "Makefile", "MIT License"]
   },
   "proj-fetal": {
