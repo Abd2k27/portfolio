@@ -23,7 +23,7 @@ const saved = localStorage.getItem("theme");
 if (saved) { document.documentElement.setAttribute("data-theme", saved); if (saved === "dark") toggleSwitch.checked = true; }
 
 /* ===== TYPING EFFECT ===== */
-const phrases = ["Data Analyst", "Data Scientist", "Data Project Manager", "Health Data Specialist", "Machine Learning Engineer"];
+const phrases = ["Data Scientist", "Health Data Specialist"];
 const typedEl = document.getElementById("typed-text");
 let pi = 0, ci = 0, del = false;
 function typeLoop() {
