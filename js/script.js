@@ -287,6 +287,30 @@ const modalData = {
       <li><strong>Deployment:</strong> Containerized with Docker, served via Gunicorn, and deployed to AWS via GitLab CI/CD</li>
     </ul>`,
     skills: ["Dash", "Plotly", "Selenium", "Docker", "AWS", "GitLab CI/CD", "Pandas"]
+  },
+  "exp-melio": {
+    tag: "💼 Current Intervention",
+    title: "AI Developer — Mélio",
+    date: "October 2025 — Present",
+    body: `<p>Intervening on AI features for <strong>Mélio</strong>, a platform dedicated to student emotional support and school climate improvement.</p>
+    <ul>
+      <li>Developing and optimizing AI models for emotional analysis and support</li>
+      <li>Collaborating on features to foster a positive and safe educational environment</li>
+      <li>Integrating AI-driven insights for educational teams and youth</li>
+    </ul>`,
+    skills: ["AI", "NLP", "EdTech", "Python", "SaaS", "School Climate"]
+  },
+  "proj-melio": {
+    tag: "AI / EdTech",
+    title: "Mélio — AI Emotional Support",
+    date: "Collaborative Project",
+    body: `<p>A benevolent and innovative tool designed to accompany young people and support educational teams.</p>
+    <ul>
+      <li><strong>Emotional Support:</strong> AI-driven tools to help students navigate their emotions.</li>
+      <li><strong>School Climate:</strong> Data-informed strategies to foster a peaceful school environment.</li>
+      <li><strong>Innovation:</strong> Leveraging cutting-edge AI to provide personalized and impactful support.</li>
+    </ul>`,
+    skills: ["AI", "Sentiment Analysis", "EdTech", "UX Design", "Social Impact"]
   }
 };
 
