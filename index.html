@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abdou — Data Scientist & Data Project Manager</title>
-  <meta name="description" content="Portfolio of Abdou Wahab Dossou — Data Scientist specializing in AI, Machine Learning, and Health Data Analytics."/>
+  <title>Abdou — Data Scientist & Health Data Specialist</title>
+  <meta name="description" content="Portfolio of Abdou Wahab Dossou — Data Scientist at the intersection of health technology and financial data science."/>
   <link rel="icon" type="image/x-icon" href="assets/favicon/Abdou-Logo.ico"/>
   <link rel="stylesheet" href="css/style.css"/>
 
@@ -27,13 +27,15 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo"><img src="./assets/favicon/Abdou-Logo.ico" alt="Abdou Logo"/></a>
       <ul class="nav-menu">
-        <li><a class="nav-link" href="#hero">Home</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#journey">Journey</a></li>
-        <li><a class="nav-link" href="#stack">Stack</a></li>
-        <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-        <li><a class="nav-link btn-resume" href="./assets/Abdou_DOSSOU_CV.pdf" download>Resume ↓</a></li>
+        <li><a class="nav-link" href="#hero" data-i18n="nav.home">Home</a></li>
+        <li><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+        <li><a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a class="nav-link" href="#experience" data-i18n="nav.exp">Experience</a></li>
+        <li><a class="nav-link" href="#stack" data-i18n="nav.stack">Stack</a></li>
+        <li><a class="nav-link" href="#journey" data-i18n="nav.edu">Education</a></li>
+        <li><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a class="nav-link btn-resume" href="./assets/Abdou_DOSSOU_CV.pdf" download data-i18n="nav.resume">Resume ↓</a></li>
+        <button id="lang-btn" class="lang-btn" onclick="toggleLang()">FR</button>
         <div class="theme-switch">
           <input type="checkbox" id="switch"/>
           <label class="toggle-icons" for="switch">
@@ -49,131 +51,100 @@
   <!-- ===== BENTO GALLERY ===== -->
   <main class="gallery">
 
-    <!-- HERO CARD -->
+    <!-- 1. HERO CARD -->
     <section class="card card-hero" id="hero">
       <div class="manga-lines top-right"></div>
       <img class="hero-avatar" src="assets/my-avatar.png" alt="Abdou Wahab Dossou"/>
       <div class="hero-text">
-        <p class="card-label">// Welcome</p>
+        <p class="card-label" data-i18n="hero.label">// M2 in Health Data Science — In Progress</p>
         <h1>Hi, I'm <span class="accent">Abdou</span></h1>
         <p class="hero-typing" id="typed-text"></p>
-        <p class="hero-desc">Data Analyst at Nickel — leveraging data science to drive customer experience and impactful solutions across health, fintech, and tech.</p>
+        <p class="hero-desc" data-i18n="hero.desc">From building AI models for fetal diagnostics to driving customer analytics at Nickel — I bridge health technology and financial data science.</p>
         <div class="hero-cta">
-          <a href="#projects" class="btn-ink">View Projects →</a>
-          <a href="#contact" class="btn-outline">Get In Touch</a>
+          <a href="#projects" class="btn-ink" data-i18n="hero.cta1">View Projects →</a>
+          <a href="#contact" class="btn-outline" data-i18n="hero.cta2">Get In Touch</a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT CARD -->
+    <!-- 2. ABOUT CARD -->
     <section class="card card-about" id="about">
-      <p class="card-label">// About Me</p>
-      <h2>Passionate about<br/><span class="accent">Data & Impact</span></h2>
-      <p class="card-text">Currently Data Analyst in Customer Experience at Nickel, I combine analytical skills with a Master's in Data Science en Santé (Université de Lille) and a Master in Digital Transformation (Epitech). From managing 200+ students at Epitech Bénin to building AI-driven solutions, I aim to drive meaningful advancements in technology and healthcare.</p>
+      <p class="card-label" data-i18n="about.label">// About</p>
+      <h2><span data-i18n="about.h2a">Where Health</span><br/><span class="accent" data-i18n="about.h2b">Meets Finance</span></h2>
+      <p class="card-text" data-i18n="about.text">Health data taught me that bad predictions cost lives. Fintech taught me they cost trust. Both demand the same rigour — clean data, honest models, real impact. I carry that dual perspective into every project, currently deepening it through my M2 in Health Data Science at Université de Lille.</p>
       <div class="about-stats">
-        <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-lbl">Projects</span></div>
-        <div class="stat"><span class="stat-num" data-target="2">0</span><span class="stat-lbl">Masters</span></div>
-        <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-lbl">Experiences</span></div>
+        <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-lbl" data-i18n="about.stat1">Projects</span></div>
+        <div class="stat"><span class="stat-num" data-target="2">0</span><span class="stat-lbl" data-i18n="about.stat2">Masters</span></div>
+        <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-lbl" data-i18n="about.stat3">Experiences</span></div>
       </div>
     </section>
 
-    <!-- EDUCATION CARD -->
-    <section class="card card-edu" id="journey">
-      <p class="card-label">// 🎓 Education</p>
-      <div class="timeline">
-        <div class="tl-item" data-modal="edu-m2"><span class="tl-dot"></span><div><span class="tl-date">2024 — 2026</span><h3>Master Data Science en Santé</h3><p>Université de Lille — ILIS</p></div></div>
-        <div class="tl-item" data-modal="edu-epitech"><span class="tl-dot"></span><div><span class="tl-date">2022 — 2024</span><h3>Master in Digital Transformation</h3><p>Epitech</p></div></div>
-        <div class="tl-item" data-modal="edu-bsc"><span class="tl-dot"></span><div><span class="tl-date">2019 — 2022</span><h3>Bachelor in IT Expertise</h3><p>Epitech — Software Engineering</p></div></div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE CARD -->
-    <section class="card card-exp">
-      <p class="card-label">// 💼 Experience</p>
-      <div class="timeline">
-        <div class="tl-item" data-modal="exp-melio"><span class="tl-dot"></span><div><span class="tl-date">Feb 2026 — Present</span><h3>AI Developer — Mélio</h3><p>AI-driven student support & school climate</p></div></div>
-        <div class="tl-item" data-modal="exp-nickel"><span class="tl-dot"></span><div><span class="tl-date">Sept 2025 — Present</span><h3>Data Analyst CX — Nickel</h3><p>Customer Experience analytics</p></div></div>
-        <div class="tl-item" data-modal="exp-singa"><span class="tl-dot"></span><div><span class="tl-date">Apr — Aug 2025</span><h3>M&E Assistant — SINGA</h3><p>Monitoring & Evaluation</p></div></div>
-        <div class="tl-item" data-modal="exp-hub"><span class="tl-dot"></span><div><span class="tl-date">2022 — 2024</span><h3>Hub Manager — Epitech Bénin</h3><p>Innovation hub & 200+ students</p></div></div>
-        <div class="tl-item" data-modal="exp-aff"><span class="tl-dot"></span><div><span class="tl-date">May — Sep 2022</span><h3>IT PM — Africa Fintech Forum</h3><p>Platform architecture & team</p></div></div>
-        <div class="tl-item" data-modal="exp-acumen"><span class="tl-dot"></span><div><span class="tl-date">Jul — Nov 2020</span><h3>Asst. PM — Acumen Network</h3><p>Sprint planning & data processing</p></div></div>
-      </div>
-    </section>
-
-    <!-- TECH STACK CARD -->
-    <section class="card card-stack" id="stack">
-      <p class="card-label">// Tech Stack</p>
-      <h2>Tools I Use</h2>
-      <div class="stack-grid">
-        <div class="stack-chip"><img src="./assets/images/pythonlogo.png" alt="Python"/><span>Python</span></div>
-        <div class="stack-chip"><img src="./assets/images/Rlogo.png" alt="R"/><span>R</span></div>
-        <div class="stack-chip"><img src="./assets/images/sqllogo.png" alt="SQL"/><span>SQL</span></div>
-        <div class="stack-chip"><img src="./assets/images/jslogo.png" alt="JS"/><span>JavaScript</span></div>
-        <div class="stack-chip"><img src="./assets/images/docker.svg" alt="Docker"/><span>Docker</span></div>
-        <div class="stack-chip"><img src="./assets/images/aws.webp" alt="AWS"/><span>AWS</span></div>
-        <div class="stack-chip"><img src="./assets/images/gitlogo.png" alt="Git"/><span>Git</span></div>
-        <div class="stack-chip"><img src="./assets/images/github.svg" alt="GitHub"/><span>GitHub</span></div>
-        <div class="stack-chip"><img src="./assets/images/htmllogo.png" alt="HTML"/><span>HTML</span></div>
-        <div class="stack-chip"><img src="./assets/images/csslogo.png" alt="CSS"/><span>CSS</span></div>
-      </div>
-    </section>
-
-    <!-- ALL PROJECTS IN ONE CARD -->
+    <!-- 3. PROJECTS CARD -->
     <section class="card card-projects" id="projects">
-      <p class="card-label">// Projects</p>
-      <h2>Featured Work</h2>
+      <p class="card-label" data-i18n="proj.label">// Projects</p>
+      <h2 data-i18n="proj.h2">Featured Work</h2>
       <div class="projects-list">
 
-        <article class="proj-item proj-featured" data-modal="proj-finder">
-          <div class="proj-header">
-            <span class="proj-tag">🏆 Master's Thesis</span>
-            <h3>Finder Bot — Geolocation AI Assistant</h3>
-          </div>
-          <p>Hybrid LLM-RAG geolocation assistant with graph-based spatial reasoning and SAR-inspired probability modeling. MIT Licensed.</p>
-          <div class="proj-footer">
-            <div class="proj-tech"><span>Python</span><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
-            <div class="proj-links"><a href="https://github.com/Abd2k27/Finder_bot" target="_blank">GitHub ↗</a><a href="https://abd2k27.github.io/Finder_bot/" target="_blank">Live ↗</a></div>
-          </div>
-        </article>
-
-        <div class="proj-row">
-          <article class="proj-item" data-modal="proj-fetal">
-            <div class="proj-header"><span class="proj-tag">Medical CV</span><h3>Fetal Ultrasound Classification</h3></div>
-            <p>EfficientNet-B0 for automated fetal anatomical plane identification with Grad-CAM explainability.</p>
+        <!-- Featured tier (3 prominent) -->
+        <div class="proj-featured-grid">
+          <article class="proj-item proj-featured" data-modal="proj-finder">
+            <div class="proj-header">
+              <span class="proj-tag" data-i18n="proj.finder.tag">🏆 Master's Thesis</span>
+              <h3 data-i18n="proj.finder.title">Finder Bot — Geolocation AI</h3>
+            </div>
+            <p data-i18n="proj.finder.desc">Hybrid LLM-RAG geolocation assistant. Graph-based spatial reasoning + SAR probability modeling. MIT Licensed.</p>
+            <div class="proj-footer">
+              <div class="proj-tech"><span>Python</span><span>LLM</span><span>RAG</span><span>SQLite</span></div>
+              <div class="proj-links"><a href="https://github.com/Abd2k27/Finder_bot" target="_blank">GitHub ↗</a><a href="https://abd2k27.github.io/Finder_bot/" target="_blank">Live ↗</a></div>
+            </div>
+          </article>
+          <article class="proj-item proj-featured" data-modal="proj-fetal">
+            <div class="proj-header">
+              <span class="proj-tag" data-i18n="proj.fetal.tag">🏥 Medical AI</span>
+              <h3 data-i18n="proj.fetal.title">Fetal Ultrasound Classification</h3>
+            </div>
+            <p data-i18n="proj.fetal.desc">EfficientNet-B0 for automated fetal plane identification with Grad-CAM. 99.46% recall on fetal brain.</p>
             <div class="proj-footer">
               <div class="proj-tech"><span>PyTorch</span><span>EfficientNet</span><span>Grad-CAM</span></div>
               <div class="proj-links"><a href="https://github.com/Abd2k27/fetal-ultrasound-classification" target="_blank">GitHub ↗</a></div>
             </div>
           </article>
+          <article class="proj-item proj-featured" data-modal="proj-asthme">
+            <div class="proj-header">
+              <span class="proj-tag" data-i18n="proj.asthme.tag">📊 Public Health</span>
+              <h3 data-i18n="proj.asthme.title">Asthma Dashboard</h3>
+            </div>
+            <p data-i18n="proj.asthme.desc">Interactive dashboard on asthma ER visits, pollen & air pollution in France. Deployed on AWS via Docker.</p>
+            <div class="proj-footer">
+              <div class="proj-tech"><span>Dash</span><span>Selenium</span><span>Docker</span><span>AWS</span></div>
+              <div class="proj-links"><a href="https://github.com/Abd2k27/asthme-dash" target="_blank">GitHub ↗</a><a href="https://sijkhavkmx.eu-west-3.awsapprunner.com/" target="_blank">Live ↗</a></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Secondary tier -->
+        <div class="proj-row">
           <article class="proj-item" data-modal="proj-lexi">
-            <div class="proj-header"><span class="proj-tag">NLP / RAG</span><h3>LexiBot — Legal RAG Chatbot</h3></div>
-            <p>RAG chatbot with hybrid semantic + BM25 search over legal PDF documents. Multi-query decomposition.</p>
+            <div class="proj-header"><span class="proj-tag" data-i18n="proj.lexi.tag">NLP / RAG</span><h3 data-i18n="proj.lexi.title">LexiBot — Legal Chatbot</h3></div>
+            <p data-i18n="proj.lexi.desc">Hybrid semantic + BM25 RAG over 200+ pages of legal PDF. Multi-query decomposition.</p>
             <div class="proj-footer">
               <div class="proj-tech"><span>Streamlit</span><span>ChromaDB</span><span>BM25</span></div>
               <div class="proj-links"><a href="https://github.com/Abd2k27/LexiBot---RAG" target="_blank">GitHub ↗</a></div>
             </div>
           </article>
           <article class="proj-item" data-modal="proj-immo">
-            <div class="proj-header"><span class="proj-tag">Data Viz</span><h3>ImmoViz — Real Estate</h3></div>
-            <p>Interactive geospatial dashboard for French real estate exploration.</p>
+            <div class="proj-header"><span class="proj-tag" data-i18n="proj.immo.tag">Data Viz</span><h3 data-i18n="proj.immo.title">ImmoViz — Real Estate</h3></div>
+            <p data-i18n="proj.immo.desc">Interactive geospatial dashboard for French real estate exploration.</p>
             <div class="proj-footer">
               <div class="proj-tech"><span>Streamlit</span><span>Leaflet</span><span>Pandas</span></div>
               <div class="proj-links"><a href="https://github.com/Abd2k27/ImmoViz" target="_blank">GitHub ↗</a><a href="https://immoviz-cgxwo4whbtf8yrhfs7s3ql.streamlit.app/" target="_blank">Live ↗</a></div>
             </div>
           </article>
-          <article class="proj-item" data-modal="proj-asthme">
-            <div class="proj-header"><span class="proj-tag">Health Data</span><h3>Asthme Dashboard</h3></div>
-            <p>Dashboard interactif sur les urgences asthme, pollens et pollution en France. Déployé sur AWS.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Dash</span><span>Selenium</span><span>Docker</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/asthme-dash" target="_blank">GitHub ↗</a><a href="https://sijkhavkmx.eu-west-3.awsapprunner.com/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
           <article class="proj-item" data-modal="proj-melio">
-            <div class="proj-header"><span class="proj-tag">AI / EdTech</span><h3>Mélio — AI Emotional Support</h3></div>
-            <p>Contributing to AI features for student emotional support and school climate optimization.</p>
+            <div class="proj-header"><span class="proj-tag" data-i18n="proj.melio.tag">AI / EdTech</span><h3 data-i18n="proj.melio.title">Mélio — AI Support</h3></div>
+            <p data-i18n="proj.melio.desc">AI features for student emotional support and school climate optimization.</p>
             <div class="proj-footer">
-              <div class="proj-tech"><span>AI</span><span>EdTech</span><span>SaaS</span></div>
+              <div class="proj-tech"><span>AI</span><span>NLP</span><span>SaaS</span></div>
               <div class="proj-links"><a href="https://www.melio-soutien.fr/" target="_blank">Website ↗</a></div>
             </div>
           </article>
@@ -182,11 +153,122 @@
       </div>
     </section>
 
-    <!-- CONTACT CARD -->
+    <!-- 4. EXPERIENCE CARD -->
+    <section class="card card-exp" id="experience">
+      <p class="card-label" data-i18n="exp.label">// 💼 Experience</p>
+      <div class="timeline">
+        <div class="tl-item" data-modal="exp-melio">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">Feb 2026 — Present</span>
+            <h3><a href="https://www.melio-soutien.fr/" target="_blank" class="tl-company">AI Developer — Mélio ↗</a></h3>
+            <p data-i18n="exp.melio.desc">AI-driven student support & school climate</p>
+            <span class="tl-metric" data-i18n="exp.melio.metric">AI features · school well-being platform</span>
+          </div>
+        </div>
+        <div class="tl-item" data-modal="exp-nickel">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">Sept 2025 — Present</span>
+            <h3><a href="https://nickel.eu/fr" target="_blank" class="tl-company">Data Analyst CX — Nickel ↗</a></h3>
+            <p data-i18n="exp.nickel.desc">Customer Experience analytics</p>
+            <span class="tl-metric" data-i18n="exp.nickel.metric">3M+ customers · CX dashboards</span>
+          </div>
+        </div>
+        <div class="tl-item" data-modal="exp-singa">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">Apr — Aug 2025</span>
+            <h3><a href="https://wearesinga.org/" target="_blank" class="tl-company">M&E Assistant — SINGA ↗</a></h3>
+            <p data-i18n="exp.singa.desc">Monitoring & Evaluation</p>
+            <span class="tl-metric" data-i18n="exp.singa.metric">Impact measurement · refugee entrepreneurship</span>
+          </div>
+        </div>
+        <div class="tl-item" data-modal="exp-hub">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">2022 — 2024</span>
+            <h3><a href="https://epitech.africa/" target="_blank" class="tl-company">Hub Manager — Epitech Benin ↗</a></h3>
+            <p data-i18n="exp.hub.desc">Innovation hub management</p>
+            <span class="tl-metric" data-i18n="exp.hub.metric">200+ students · 3 innovation programs</span>
+          </div>
+        </div>
+        <div class="tl-item" data-modal="exp-aff">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">May — Sep 2022</span>
+            <h3><a href="https://africafintechforum.net/" target="_blank" class="tl-company">IT PM — Africa Fintech Forum ↗</a></h3>
+            <p data-i18n="exp.aff.desc">Platform architecture & team coordination</p>
+            <span class="tl-metric" data-i18n="exp.aff.metric">Platform for 50+ stakeholders</span>
+          </div>
+        </div>
+        <div class="tl-item" data-modal="exp-acumen">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">Jul — Nov 2020</span>
+            <h3><a href="https://agrosfer.co/" target="_blank" class="tl-company">Asst. PM — Agrosfer ↗</a></h3>
+            <p data-i18n="exp.agrosfer.desc">AgriTech sprint planning & data processing</p>
+            <span class="tl-metric" data-i18n="exp.agrosfer.metric">AgriTech · MVP delivery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EDUCATION CARD — beside Experience (span 1 fills the gap) -->
+    <section class="card card-edu" id="journey">
+      <p class="card-label" data-i18n="edu.label">// 🎓 Education</p>
+      <div class="timeline">
+        <div class="tl-item" data-modal="edu-m2">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">2024 — 2026</span>
+            <h3>Master in Health Data Science <span class="badge-progress" data-i18n="edu.inprogress">In Progress</span></h3>
+            <p>Université de Lille — ILIS</p>
+          </div>
+        </div>
+        <div class="tl-item" data-modal="edu-epitech">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">2022 — 2024</span>
+            <h3>Master in Digital Transformation</h3>
+            <p>Epitech</p>
+          </div>
+        </div>
+        <div class="tl-item" data-modal="edu-bsc">
+          <span class="tl-dot"></span>
+          <div>
+            <span class="tl-date">2019 — 2022</span>
+            <h3>Bachelor in IT Expertise</h3>
+            <p>Epitech — Software Engineering</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. TECH STACK CARD — full width row -->
+    <section class="card card-stack" id="stack">
+      <p class="card-label" data-i18n="stack.label">// Tech Stack</p>
+      <h2 data-i18n="stack.h2">Tools I Use</h2>
+      <div class="stack-grid">
+        <a class="stack-chip" href="https://docs.python.org/3/" target="_blank"><img src="./assets/images/pythonlogo.png" alt="Python"/><span>Python</span></a>
+        <a class="stack-chip" href="https://www.r-project.org/other-docs.html" target="_blank"><img src="./assets/images/Rlogo.png" alt="R"/><span>R</span></a>
+        <a class="stack-chip" href="https://www.postgresql.org/docs/" target="_blank"><img src="./assets/images/sqllogo.png" alt="SQL"/><span>SQL</span></a>
+        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"><img src="./assets/images/jslogo.png" alt="JS"/><span>JavaScript</span></a>
+        <a class="stack-chip" href="https://docs.docker.com/" target="_blank"><img src="./assets/images/docker.svg" alt="Docker"/><span>Docker</span></a>
+        <a class="stack-chip" href="https://docs.aws.amazon.com/" target="_blank"><img src="./assets/images/aws.webp" alt="AWS"/><span>AWS</span></a>
+        <a class="stack-chip" href="https://git-scm.com/doc" target="_blank"><img src="./assets/images/gitlogo.png" alt="Git"/><span>Git</span></a>
+        <a class="stack-chip" href="https://docs.github.com/" target="_blank"><img src="./assets/images/github.svg" alt="GitHub"/><span>GitHub</span></a>
+        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/HTML" target="_blank"><img src="./assets/images/htmllogo.png" alt="HTML"/><span>HTML</span></a>
+        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/CSS" target="_blank"><img src="./assets/images/csslogo.png" alt="CSS"/><span>CSS</span></a>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT / BOOKING CARD -->
     <section class="card card-contact" id="contact">
       <div class="contact-left">
-        <p class="card-label">// Contact</p>
-        <h2>Let's Work<br/><span class="accent">Together</span></h2>
+        <p class="card-label" data-i18n="contact.label">// Contact</p>
+        <h2><span data-i18n="contact.h2a">Let's Work</span><br/><span class="accent" data-i18n="contact.h2b">Together</span></h2>
+        <p class="card-text" data-i18n="contact.desc">Open to data science roles, research collaborations, and consulting missions in health tech or fintech.</p>
         <div class="social-row">
           <a href="https://www.linkedin.com/in/wahabdossou/" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
           <a href="https://github.com/Abd2k27" target="_blank" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
@@ -194,10 +276,10 @@
         </div>
       </div>
       <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required/>
-        <input type="email" name="email" placeholder="Your Email" required/>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="btn-ink">Send Message →</button>
+        <input type="text" name="name" data-i18n-placeholder="contact.name" placeholder="Your Name" required/>
+        <input type="email" name="email" data-i18n-placeholder="contact.email" placeholder="Your Email" required/>
+        <textarea name="message" data-i18n-placeholder="contact.message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn-ink" data-i18n="contact.btn">Send Message →</button>
       </form>
     </section>
 
