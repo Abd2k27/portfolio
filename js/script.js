@@ -3,17 +3,17 @@ const i18n = {
   en: {
     "nav.home":"Home","nav.about":"About","nav.projects":"Projects","nav.exp":"Experience",
     "nav.stack":"Stack","nav.edu":"Education","nav.contact":"Contact","nav.resume":"Resume ↓",
-    "hero.label":"// M2 in Health Data Science — In Progress",
-    "hero.desc":"From building AI models for fetal diagnostics to driving customer analytics at Nickel — I bridge health technology and financial data science.",
+    "hero.label":"// Data Scientist",
+    "hero.desc":"Data Scientist with dual expertise: data engineering and fraud detection in regulated Fintech (Nickel / BNP Paribas), and AI modeling in healthcare (fetal diagnostics, missing persons search). I build robust ML systems under real-world constraints.",
     "hero.cta1":"View Projects →","hero.cta2":"Get In Touch",
-    "about.label":"// About","about.h2a":"Where Health","about.h2b":"Meets Finance",
-    "about.text":"Health data taught me that bad predictions cost lives. Fintech taught me they cost trust. Both demand the same rigour — clean data, honest models, real impact. I carry that dual perspective into every project, currently deepening it through my M2 in Health Data Science at Université de Lille.",
+    "about.label":"// About","about.h2a":"Data Science,","about.h2b":"Two Fields",
+    "about.text":"In Fintech, I industrialize data pipelines in production (dbt, BigQuery, SQL) and build fraud detection and customer scoring models at Nickel (BNP Paribas). In healthcare, I apply deep learning to medical imaging and NLP to clinical data as part of my Master's in Health Data Science (ILIS – Université de Lille). Two domains, one standard: reliable models, clean data, measurable impact.",
     "about.stat1":"Projects","about.stat2":"Masters","about.stat3":"Experiences",
     "proj.label":"// Projects","proj.h2":"Featured Work",
     "proj.finder.title":"Finder Bot — Geolocation AI","proj.finder.tag":"🏆 Master's Thesis",
     "proj.finder.desc":"Hybrid LLM-RAG geolocation assistant. Graph-based spatial reasoning + SAR probability modeling. MIT Licensed.",
     "proj.fetal.title":"Fetal Ultrasound Classification","proj.fetal.tag":"🏥 Medical AI",
-    "proj.fetal.desc":"EfficientNet-B0 for automated fetal plane identification with Grad-CAM. 99.46% recall on fetal brain.",
+    "proj.fetal.desc":"EfficientNet-B0 for automated fetal plane identification with Grad-CAM. 92% accuracy, F1 macro 0.91.",
     "proj.asthme.title":"Asthma Dashboard","proj.asthme.tag":"📊 Public Health",
     "proj.asthme.desc":"Interactive dashboard on asthma ER visits, pollen & air pollution in France. Deployed on AWS via Docker.",
     "proj.lexi.title":"LexiBot — Legal Chatbot","proj.lexi.tag":"NLP / RAG",
@@ -21,34 +21,34 @@ const i18n = {
     "proj.immo.title":"ImmoViz — Real Estate","proj.immo.tag":"Data Viz",
     "proj.immo.desc":"Interactive geospatial dashboard for French real estate exploration.",
     "proj.melio.title":"Mélio — AI Support","proj.melio.tag":"AI / EdTech",
-    "proj.melio.desc":"AI features for student emotional support and school climate optimization.",
+    "proj.melio.desc":"Detection of school distress via business rules and semantic search (RAG). AI for school climate.",
     "exp.label":"// 💼 Experience",
     "exp.melio.desc":"AI-driven student support & school climate","exp.melio.metric":"AI features · school well-being platform",
-    "exp.nickel.desc":"Customer Experience analytics","exp.nickel.metric":"3M+ customers · CX dashboards",
-    "exp.singa.desc":"Monitoring & Evaluation","exp.singa.metric":"Impact measurement · refugee entrepreneurship",
+    "exp.nickel.desc":"Data Analyst CX & Fraud Apprentice","exp.nickel.metric":"30+ dbt models · 3 fraud ML models · 3M+ customers",
+    "exp.singa.desc":"Data Analyst — Monitoring & Evaluation","exp.singa.metric":"Social impact metrics across 5+ countries · Salesforce CRM",
     "exp.hub.desc":"Innovation hub management","exp.hub.metric":"200+ students · 3 innovation programs",
     "exp.aff.desc":"Platform architecture & team coordination","exp.aff.metric":"Platform for 50+ stakeholders",
     "exp.agrosfer.desc":"AgriTech sprint planning & data processing","exp.agrosfer.metric":"AgriTech · MVP delivery",
     "stack.label":"// Tech Stack","stack.h2":"Tools I Use",
     "edu.label":"// 🎓 Education","edu.inprogress":"In Progress",
     "contact.label":"// Contact","contact.h2a":"Let's Work","contact.h2b":"Together",
-    "contact.desc":"Open to data science roles, research collaborations, and consulting missions in health tech or fintech.",
+    "contact.desc":"Open to Data Scientist roles, ML engineering positions, and data consulting missions in Fintech or health tech.",
     "contact.name":"Your Name","contact.email":"Your Email","contact.message":"Your Message","contact.btn":"Send Message →"
   },
   fr: {
     "nav.home":"Accueil","nav.about":"À propos","nav.projects":"Projets","nav.exp":"Expériences",
     "nav.stack":"Outils","nav.edu":"Formation","nav.contact":"Contact","nav.resume":"CV ↓",
-    "hero.label":"// M2 Data Science en Santé — En cours",
-    "hero.desc":"De la construction de modèles IA pour le diagnostic fœtal à l'analyse CX chez Nickel — j'œuvre au carrefour de la santé numérique et de la data science financière.",
+    "hero.label":"// Data Scientist",
+    "hero.desc":"Data Scientist avec une double expertise : ingénierie de données et détection de fraude en Fintech régulée (Nickel / BNP Paribas), et modélisation IA en santé (diagnostic fœtal, recherche de personnes disparues). Je conçois des systèmes ML robustes sous contraintes réelles.",
     "hero.cta1":"Voir les projets →","hero.cta2":"Me contacter",
-    "about.label":"// À propos","about.h2a":"Là où la santé","about.h2b":"rencontre la finance",
-    "about.text":"La data santé m'a appris qu'une mauvaise prédiction coûte des vies. La fintech m'a appris qu'elle coûte la confiance. Les deux exigent la même rigueur — données propres, modèles honnêtes, impact réel. Je porte cette double perspective dans chaque projet, en l'approfondissant dans mon M2 Data Science en Santé à Lille.",
+    "about.label":"// À propos","about.h2a":"Data Science,","about.h2b":"Deux Terrains",
+    "about.text":"En Fintech, j'industrialise des pipelines de données en production (dbt, BigQuery, SQL) et je conçois des modèles de détection de fraude et de scoring client chez Nickel (BNP Paribas). En santé, j'applique le deep learning à l'imagerie médicale et le NLP aux données cliniques dans le cadre de mon Master Data Science en Santé (ILIS – Université de Lille). Deux domaines, une même exigence : des modèles fiables, des données propres, un impact mesurable.",
     "about.stat1":"Projets","about.stat2":"Masters","about.stat3":"Expériences",
     "proj.label":"// Projets","proj.h2":"Travaux Sélectionnés",
     "proj.finder.title":"Finder Bot — IA de Géolocalisation","proj.finder.tag":"🏆 Mémoire de Master",
     "proj.finder.desc":"Assistant de géolocalisation hybride LLM-RAG. Raisonnement spatial par graphe + modélisation probabiliste SAR.",
     "proj.fetal.title":"Classification d'Échographies Fœtales","proj.fetal.tag":"🏥 IA Médicale",
-    "proj.fetal.desc":"EfficientNet-B0 pour l'identification automatique des plans fœtaux par échographie. Rappel de 99,46% sur le cerveau fœtal.",
+    "proj.fetal.desc":"EfficientNet-B0 pour l'identification automatique des plans fœtaux par échographie. 92% de précision, F1 macro 0,91.",
     "proj.asthme.title":"Dashboard Asthme","proj.asthme.tag":"📊 Santé Publique",
     "proj.asthme.desc":"Dashboard interactif sur les passages aux urgences pour asthme, pollens et pollution en France. Déployé sur AWS via Docker.",
     "proj.lexi.title":"LexiBot — Chatbot Juridique","proj.lexi.tag":"TALN / RAG",
@@ -56,18 +56,18 @@ const i18n = {
     "proj.immo.title":"ImmoViz — Immobilier","proj.immo.tag":"Data Viz",
     "proj.immo.desc":"Dashboard géospatial interactif pour l'exploration du marché immobilier français.",
     "proj.melio.title":"Mélio — Soutien par l'IA","proj.melio.tag":"IA / EdTech",
-    "proj.melio.desc":"Fonctionnalités IA pour le soutien émotionnel des élèves et l'amélioration du climat scolaire.",
+    "proj.melio.desc":"Détection de la détresse scolaire par règles métier et recherche sémantique (RAG). IA pour le climat scolaire.",
     "exp.label":"// 💼 Expériences",
     "exp.melio.desc":"Soutien étudiant & climat scolaire pilotés par l'IA","exp.melio.metric":"Fonctionnalités IA · plateforme bien-être scolaire",
-    "exp.nickel.desc":"Analyse de l'Expérience Client","exp.nickel.metric":"3M+ clients · dashboards CX",
-    "exp.singa.desc":"Suivi & Évaluation","exp.singa.metric":"Mesure d'impact · entrepreneuriat réfugiés",
+    "exp.nickel.desc":"Alternance Data Analyst, CX & Fraude","exp.nickel.metric":"30+ modèles dbt · 3 modèles ML fraude · 3M+ clients",
+    "exp.singa.desc":"Data Analyst — Suivi & Évaluation","exp.singa.metric":"Mesure d'impact sur 5+ pays · CRM Salesforce",
     "exp.hub.desc":"Gestion du hub d'innovation","exp.hub.metric":"200+ étudiants · 3 programmes d'innovation",
     "exp.aff.desc":"Architecture plateforme & coordination équipe","exp.aff.metric":"Plateforme pour 50+ parties prenantes",
     "exp.agrosfer.desc":"Planification sprint AgriTech & traitement de données","exp.agrosfer.metric":"AgriTech · livraison MVP",
     "stack.label":"// Outils","stack.h2":"Ma Stack Technique",
     "edu.label":"// 🎓 Formation","edu.inprogress":"En cours",
     "contact.label":"// Contact","contact.h2a":"Travaillons","contact.h2b":"Ensemble",
-    "contact.desc":"Ouvert aux postes en data science, collaborations de recherche et missions de conseil en santé numérique ou fintech.",
+    "contact.desc":"Ouvert aux postes de Data Scientist, missions en ML engineering et consulting data en Fintech ou santé.",
     "contact.name":"Votre prénom","contact.email":"Votre email","contact.message":"Votre message","contact.btn":"Envoyer →"
   }
 };
@@ -119,7 +119,7 @@ const saved = localStorage.getItem("theme");
 if (saved) { document.documentElement.setAttribute("data-theme", saved); if (saved === "dark") toggleSwitch.checked = true; }
 
 /* ===== TYPING EFFECT ===== */
-const phrases = ["Data Scientist", "Health Data Specialist"];
+const phrases = ["Data Scientist", "ML Engineer", "Data Engineer"];
 const typedEl = document.getElementById("typed-text");
 let pi = 0, ci = 0, del = false;
 function typeLoop() {
@@ -237,35 +237,61 @@ const modalData = {
   },
   "exp-nickel": {
     tag: { en: "💼 Current Position", fr: "💼 Poste actuel" },
-    title: { en: "Data Analyst — Customer Experience", fr: "Data Analyst — Expérience Client" },
+    title: { en: "Data Analyst — CX & Fraud", fr: "Data Analyst — CX & Fraude" },
     date: { en: "September 2025 — Present · Nantes, France", fr: "Septembre 2025 — Présent · Nantes, France" },
     body: {
-      en: `<p>Data Analyst in Customer Experience at <strong>Nickel</strong>, a leading neobank serving 3M+ customers across Europe.</p>
-      <ul><li>Leveraging data analysis to shape impactful customer experience solutions</li>
-      <li>Building dashboards and reporting tools for CX performance tracking</li>
-      <li>Data-driven decision-making for product and service improvements</li></ul>`,
-      fr: `<p>Data Analyst en Expérience Client chez <strong>Nickel</strong>, néobanque leader en France avec plus de 3 millions de clients.</p>
-      <ul><li>Analyse de données pour améliorer l'expérience client</li>
-      <li>Construction de dashboards et outils de reporting CX</li>
-      <li>Aide à la décision data-driven pour les améliorations produit</li></ul>`
+      en: `<p>Data Analyst in Customer Experience & Fraud at <strong>Nickel</strong> (BNP Paribas), a neobank serving 3M+ customers across Europe.</p>
+      <p><strong>Decision Support & Data Engineering:</strong></p>
+      <ul><li>Built and maintained 30+ dbt models on BigQuery for CX reporting</li>
+      <li>Automated recurring analyses with SQL and Python</li></ul>
+      <p><strong>Anti-Fraud & Machine Learning:</strong></p>
+      <ul><li>Developed 3 ML models (scoring, anomaly detection) for fraud prevention</li>
+      <li>Feature engineering on transactional data under GDPR constraints</li></ul>
+      <p><strong>Retention & Churn Analysis:</strong></p>
+      <ul><li>Built churn prediction models to identify at-risk customers</li>
+      <li>Designed targeted retention action plans based on model outputs</li></ul>
+      <p><strong>Voice of Customer & Satisfaction:</strong></p>
+      <ul><li>Analyzed NPS and satisfaction surveys to identify friction points</li>
+      <li>Delivered actionable insights to product and CX teams</li></ul>`,
+      fr: `<p>Data Analyst en Expérience Client & Fraude chez <strong>Nickel</strong> (BNP Paribas), néobanque servant 3M+ clients en Europe.</p>
+      <p><strong>Aide à la décision & Data Engineering :</strong></p>
+      <ul><li>Construction et maintenance de 30+ modèles dbt sur BigQuery pour le reporting CX</li>
+      <li>Automatisation d'analyses récurrentes en SQL et Python</li></ul>
+      <p><strong>Lutte anti-fraude & Machine Learning :</strong></p>
+      <ul><li>Développement de 3 modèles ML (scoring, détection d'anomalies) pour la prévention de la fraude</li>
+      <li>Feature engineering sur données transactionnelles sous contraintes RGPD</li></ul>
+      <p><strong>Rétention & Analyse du churn :</strong></p>
+      <ul><li>Modèles prédictifs de churn pour identifier les clients à risque</li>
+      <li>Plans d'actions de rétention ciblés basés sur les sorties des modèles</li></ul>
+      <p><strong>Voix du client & Satisfaction :</strong></p>
+      <ul><li>Analyse des enquêtes NPS et de satisfaction pour identifier les points de friction</li>
+      <li>Restitution d'insights actionnables aux équipes produit et CX</li></ul>`
     },
-    skills: ["Python", "SQL", "Data Analysis", "Dashboards", "Customer Experience", "Fintech"]
+    skills: ["Python", "SQL", "dbt", "BigQuery", "Machine Learning", "Fraud Detection", "Fintech", "GDPR"]
   },
   "exp-singa": {
     tag: { en: "💼 Experience", fr: "💼 Expérience" },
-    title: { en: "Monitoring & Evaluation Assistant — SINGA", fr: "Assistant Suivi & Évaluation — SINGA" },
+    title: { en: "Data Analyst — Monitoring & Evaluation", fr: "Data Analyst — Suivi & Évaluation" },
     date: { en: "April 2025 — August 2025 · Paris, France", fr: "Avril 2025 — Août 2025 · Paris, France" },
     body: {
-      en: `<p>M&E Project Assistant at <strong>SINGA</strong>, an international organisation supporting newcomers' integration through entrepreneurship.</p>
-      <ul><li>Data collection within the monitoring and evaluation framework</li>
-      <li>Data analysis to measure the impact of SINGA Global's activities</li>
-      <li>Support for data-driven reporting and monitoring (200+ beneficiaries)</li></ul>`,
-      fr: `<p>Assistant Suivi & Évaluation à <strong>SINGA</strong>, organisation internationale soutenant l'intégration des réfugiés par l'entrepreneuriat.</p>
-      <ul><li>Collecte de données dans le cadre du suivi-évaluation</li>
-      <li>Analyse de données pour mesurer l'impact des activités de SINGA Global</li>
-      <li>Aide au reporting data-driven (200+ bénéficiaires)</li></ul>`
+      en: `<p>Data Analyst for Monitoring & Evaluation at <strong>SINGA</strong>, an international organisation supporting newcomers' integration through entrepreneurship.</p>
+      <p><strong>Framework & Harmonization:</strong></p>
+      <ul><li>Designed and harmonized M&E frameworks across 5+ countries</li>
+      <li>Standardized data collection methodologies for social impact measurement</li></ul>
+      <p><strong>Reporting & CRM:</strong></p>
+      <ul><li>Built automated reporting pipelines with Salesforce CRM</li>
+      <li>Data analysis for impact measurement on 200+ beneficiaries</li>
+      <li>Delivered data-driven insights for donor reporting and strategy</li></ul>`,
+      fr: `<p>Data Analyst en Suivi & Évaluation à <strong>SINGA</strong>, organisation internationale soutenant l'intégration des réfugiés par l'entrepreneuriat.</p>
+      <p><strong>Cadrage & Harmonisation :</strong></p>
+      <ul><li>Conception et harmonisation des cadres de suivi-évaluation sur 5+ pays</li>
+      <li>Standardisation des méthodologies de collecte de données pour la mesure d'impact social</li></ul>
+      <p><strong>Reporting & CRM :</strong></p>
+      <ul><li>Pipelines de reporting automatisés avec Salesforce CRM</li>
+      <li>Analyse de données pour la mesure d'impact sur 200+ bénéficiaires</li>
+      <li>Restitution d'insights data-driven pour le reporting bailleurs et la stratégie</li></ul>`
     },
-    skills: ["Data Collection", "Impact Analysis", "Reporting", "M&E", "Excel", "Data Visualization"]
+    skills: ["Data Analysis", "Salesforce", "Impact Measurement", "M&E", "Reporting", "Data Visualization"]
   },
   "exp-hub": {
     tag: { en: "💼 Experience", fr: "💼 Expérience" },
@@ -324,22 +350,28 @@ const modalData = {
     title: "Finder Bot — Geolocation AI Assistant",
     date: "Python 80.4% · JavaScript 13.1% · CSS 3.6% · HTML 2.3%",
     body: {
-      en: `<p>Hybrid <strong>LLM-RAG</strong> geolocation assistant — Master's thesis project. Combines graph-based spatial reasoning with SAR-inspired probability modeling.</p>
-      <p><strong>Architecture:</strong></p><ul><li>Modular API with services layer</li><li>Configuration-driven with environment variables</li>
-      <li>Agentic testing framework</li><li>Static frontend with JavaScript interaction</li></ul>
-      <p><strong>Key Features:</strong></p><ul><li>Graph-based spatial reasoning for location analysis</li>
-      <li>SAR-inspired probability modeling</li><li>LLM-powered natural language geolocation queries</li>
+      en: `<p>Hybrid <strong>LLM-RAG</strong> geolocation assistant — Master's thesis project. Real-time location of missing persons using sovereign AI.</p>
+      <p><strong>Problem:</strong></p><ul><li>Locate missing persons in real time without externalizing sensitive data</li></ul>
+      <p><strong>Solution:</strong></p>
+      <ul><li>Local LLM (Ollama) + Bayesian engine on 12M+ points of interest</li>
+      <li>Graph-based spatial reasoning + SAR-inspired probability modeling</li>
       <li>RAG pipeline for contextual document retrieval</li></ul>
+      <p><strong>Impact:</strong></p>
+      <ul><li>Full GDPR sovereignty — zero externalized data</li>
+      <li>Modular API architecture with agentic testing framework</li></ul>
       <p><a href="https://abd2k27.github.io/Finder_bot/" target="_blank" class="accent" style="font-weight:700;text-decoration:underline;">View Live Demo ↗</a></p>`,
-      fr: `<p>Assistant de géolocalisation hybride <strong>LLM-RAG</strong> — projet de mémoire de Master. Combine le raisonnement spatial par graphe avec la modélisation probabiliste d'inspiration SAR.</p>
-      <p><strong>Architecture :</strong></p><ul><li>API modulaire avec couche de services</li><li>Configuration pilotée par variables d'environnement</li>
-      <li>Framework de tests agentiques</li><li>Frontend statique avec interaction JavaScript</li></ul>
-      <p><strong>Fonctionnalités clés :</strong></p><ul><li>Raisonnement spatial par graphe</li>
-      <li>Modélisation probabiliste SAR</li><li>Requêtes géospatiales en langage naturel via LLM</li>
+      fr: `<p>Assistant de géolocalisation hybride <strong>LLM-RAG</strong> — projet de mémoire de Master. Localisation en temps réel de personnes disparues via une IA souveraine.</p>
+      <p><strong>Problématique :</strong></p><ul><li>Localiser des personnes disparues en temps réel sans externaliser les données sensibles</li></ul>
+      <p><strong>Solution :</strong></p>
+      <ul><li>LLM local (Ollama) + moteur bayésien sur 12M+ points d'intérêt</li>
+      <li>Raisonnement spatial par graphe + modélisation probabiliste SAR</li>
       <li>Pipeline RAG pour la récupération contextuelle de documents</li></ul>
+      <p><strong>Impact :</strong></p>
+      <ul><li>Souveraineté RGPD totale — zéro données externalisées</li>
+      <li>Architecture API modulaire avec framework de tests agentiques</li></ul>
       <p><a href="https://abd2k27.github.io/Finder_bot/" target="_blank" class="accent" style="font-weight:700;text-decoration:underline;">Voir la démo ↗</a></p>`
     },
-    skills: ["Python", "JavaScript", "LLM", "RAG", "Graph DB", "SAR", "MIT License"]
+    skills: ["Python", "JavaScript", "LLM", "RAG", "Ollama", "Bayesian", "GDPR", "Graph DB"]
   },
   "proj-fetal": {
     tag: { en: "Medical Computer Vision", fr: "Vision par Ordinateur Médicale" },
@@ -348,10 +380,10 @@ const modalData = {
     body: {
       en: `<p>Automated identification of fetal anatomical planes from ultrasound images using <strong>EfficientNet-B0</strong>. Tested on <strong>5,271 images</strong>.</p>
       <ul><li>Modular code: dataset, model, train, evaluation</li><li>Anatomically correct augmentations</li>
-      <li>99.46% recall on fetal brain</li><li>Grad-CAM explainability heatmaps</li></ul>`,
+      <li><strong>92% accuracy, F1 macro 0.91</strong></li><li>Grad-CAM explainability heatmaps for clinical trust</li></ul>`,
       fr: `<p>Identification automatique des plans anatomiques fœtaux à partir d'échographies via <strong>EfficientNet-B0</strong>. Testé sur <strong>5 271 images</strong>.</p>
       <ul><li>Code modulaire : dataset, modèle, entraînement, évaluation</li><li>Augmentations anatomiquement cohérentes</li>
-      <li>Rappel de 99,46% sur le cerveau fœtal</li><li>Visualisation Grad-CAM pour l'explicabilité</li></ul>`
+      <li><strong>92% de précision, F1 macro 0,91</strong></li><li>Visualisation Grad-CAM pour la confiance clinique</li></ul>`
     },
     skills: ["PyTorch", "EfficientNet-B0", "Grad-CAM", "Scikit-learn", "Computer Vision"]
   },
@@ -415,15 +447,19 @@ const modalData = {
   },
   "proj-melio": {
     tag: { en: "AI / EdTech", fr: "IA / EdTech" },
-    title: { en: "Mélio — AI Emotional Support", fr: "Mélio — Soutien Émotionnel par l'IA" },
+    title: { en: "Mélio — AI School Distress Detection", fr: "Mélio — Détection de Détresse Scolaire par IA" },
     date: { en: "Collaborative Project", fr: "Projet Collaboratif" },
     body: {
-      en: `<p>An innovative tool supporting young people and educational teams via AI.</p>
-      <ul><li>AI-driven tools for emotional navigation</li><li>Data-informed strategies for peaceful school environments</li></ul>`,
-      fr: `<p>Outil innovant accompagnant les jeunes et les équipes éducatives via l'IA.</p>
-      <ul><li>Outils pilotés par l'IA pour la gestion émotionnelle</li><li>Stratégies basées sur les données pour un climat scolaire serein</li></ul>`
+      en: `<p>An innovative platform detecting school distress and supporting educational teams via AI.</p>
+      <ul><li>Business rule engine for early distress signal detection</li>
+      <li>Semantic search (RAG) for contextual student support resources</li>
+      <li>Data-informed strategies for peaceful school environments</li></ul>`,
+      fr: `<p>Plateforme innovante de détection de la détresse scolaire et d'accompagnement des équipes éducatives via l'IA.</p>
+      <ul><li>Moteur de règles métier pour la détection précoce de signaux de détresse</li>
+      <li>Recherche sémantique (RAG) pour des ressources d'accompagnement contextualisées</li>
+      <li>Stratégies basées sur les données pour un climat scolaire serein</li></ul>`
     },
-    skills: ["AI", "Sentiment Analysis", "EdTech", "UX Design"]
+    skills: ["AI", "RAG", "Sentiment Analysis", "EdTech", "Business Rules", "NLP"]
   }
 };
 
