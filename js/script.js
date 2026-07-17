@@ -3,11 +3,11 @@ const i18n = {
   en: {
     "nav.home":"Home","nav.about":"About","nav.projects":"Projects","nav.exp":"Experience",
     "nav.stack":"Stack","nav.edu":"Education","nav.contact":"Contact","nav.resume":"Resume ↓",
-    "hero.label":"// Data Scientist",
-    "hero.desc":"Data Scientist with dual expertise: data engineering and fraud detection in regulated Fintech (Nickel / BNP Paribas), and AI modeling in healthcare (fetal diagnostics, missing persons search). I build robust ML systems under real-world constraints.",
+    "hero.label":"// Data & AI",
+    "hero.desc":"I transform raw data into decisions and concrete tools: reliable pipelines, predictive models, applied AI. I enjoy diving into analysis as much as presenting results to business teams — and building solutions that take real-world constraints into account (GDPR, sensitive data, field usage).",
     "hero.cta1":"View Projects →","hero.cta2":"Get In Touch",
-    "about.label":"// About","about.h2a":"Data Science,","about.h2b":"Two Fields",
-    "about.text":"In Fintech, I industrialize data pipelines in production (dbt, BigQuery, SQL) and build fraud detection and customer scoring models at Nickel (BNP Paribas). In healthcare, I apply deep learning to medical imaging and NLP to clinical data as part of my Master's in Health Data Science (ILIS – Université de Lille). Two domains, one standard: reliable models, clean data, measurable impact.",
+    "about.label":"// About","about.h2a":"Data,","about.h2b":"from the field to decisions",
+    "about.text":"My background intersects two worlds: regulated Fintech (Nickel / BNP Paribas), where I worked on production data pipelines, scoring and fraud detection models, and dashboards used daily by business teams — and AI applied to high-stakes use cases (healthcare, social impact), where I explore deep learning, NLP, and LLM/agent architectures.\n\nWhat I take away from these experiences: technology only has value if it meets a real need. I like to understand a problem before choosing the tool, whether it is an ML model, a dashboard, or a no-code prototype — and know how to explain my choices to both experts and non-technical teams.",
     "about.stat1":"Projects","about.stat2":"Masters","about.stat3":"Experiences",
     "proj.label":"// Projects","proj.h2":"Featured Work",
     "proj.finder.title":"Finder Bot — Geolocation AI","proj.finder.tag":"🏆 Master's Thesis",
@@ -22,6 +22,8 @@ const i18n = {
     "proj.immo.desc":"Interactive geospatial dashboard for French real estate exploration.",
     "proj.melio.title":"Mélio — AI Support","proj.melio.tag":"AI / EdTech",
     "proj.melio.desc":"Detection of school distress via business rules and semantic search (RAG). AI for school climate.",
+    "proj.verbatim.title":"Customer Verbatims Analyzer","proj.verbatim.tag":"🤖 NLP / LLM Pipeline",
+    "proj.verbatim.desc":"Asynchronous LLM pipeline (Gemma 4 via Ollama Cloud) for ingesting customer reviews, semantic theme harmonization, and qualitative synthesis. Features a real-time Streamlit dashboard.",
     "exp.label":"// 💼 Experience",
     "exp.melio.desc":"AI-driven student support & school climate","exp.melio.metric":"AI features · school well-being platform",
     "exp.nickel.desc":"Data Analyst CX & Fraud Apprentice","exp.nickel.metric":"30+ dbt models · 3 fraud ML models · 3M+ customers",
@@ -38,11 +40,11 @@ const i18n = {
   fr: {
     "nav.home":"Accueil","nav.about":"À propos","nav.projects":"Projets","nav.exp":"Expériences",
     "nav.stack":"Outils","nav.edu":"Formation","nav.contact":"Contact","nav.resume":"CV ↓",
-    "hero.label":"// Data Scientist",
-    "hero.desc":"Data Scientist avec une double expertise : ingénierie de données et détection de fraude en Fintech régulée (Nickel / BNP Paribas), et modélisation IA en santé (diagnostic fœtal, recherche de personnes disparues). Je conçois des systèmes ML robustes sous contraintes réelles.",
+    "hero.label":"// Data & IA",
+    "hero.desc":"Je transforme des données brutes en décisions et en outils concrets : pipelines fiables, modèles prédictifs, IA appliquée. J'aime autant plonger dans l'analyse que présenter des résultats à des équipes métier — et construire des solutions qui tiennent compte des vraies contraintes (RGPD, données sensibles, usages terrain).",
     "hero.cta1":"Voir les projets →","hero.cta2":"Me contacter",
-    "about.label":"// À propos","about.h2a":"Data Science,","about.h2b":"Deux Terrains",
-    "about.text":"En Fintech, j'industrialise des pipelines de données en production (dbt, BigQuery, SQL) et je conçois des modèles de détection de fraude et de scoring client chez Nickel (BNP Paribas). En santé, j'applique le deep learning à l'imagerie médicale et le NLP aux données cliniques dans le cadre de mon Master Data Science en Santé (ILIS – Université de Lille). Deux domaines, une même exigence : des modèles fiables, des données propres, un impact mesurable.",
+    "about.label":"// À propos","about.h2a":"Data,","about.h2b":"du terrain à la décision",
+    "about.text":"Mon parcours croise deux mondes : la Fintech régulée (Nickel / BNP Paribas), où j'ai travaillé sur des pipelines de données en production, des modèles de scoring et de détection de fraude, et des dashboards utilisés au quotidien par les équipes métier — et l'IA appliquée à des cas d'usage à fort enjeu (santé, impact social), où j'explore le deep learning, le NLP et les architectures LLM/agents.\n\nCe que je retiens de ces expériences : la technique n'a de valeur que si elle répond à un vrai besoin. J'aime comprendre un problème avant de choisir l'outil, qu'il s'agisse d'un modèle de ML, d'un dashboard, ou d'un prototype no-code — et savoir expliquer mes choix aussi bien à des experts qu'à des équipes non techniques.",
     "about.stat1":"Projets","about.stat2":"Masters","about.stat3":"Expériences",
     "proj.label":"// Projets","proj.h2":"Travaux Sélectionnés",
     "proj.finder.title":"Finder Bot — IA de Géolocalisation","proj.finder.tag":"🏆 Mémoire de Master",
@@ -57,6 +59,8 @@ const i18n = {
     "proj.immo.desc":"Dashboard géospatial interactif pour l'exploration du marché immobilier français.",
     "proj.melio.title":"Mélio — Soutien par l'IA","proj.melio.tag":"IA / EdTech",
     "proj.melio.desc":"Détection de la détresse scolaire par règles métier et recherche sémantique (RAG). IA pour le climat scolaire.",
+    "proj.verbatim.title":"Analyseur de Verbatims","proj.verbatim.tag":"🤖 Pipeline TALN / LLM",
+    "proj.verbatim.desc":"Pipeline LLM asynchrone (Gemma 4 via Ollama Cloud) pour l'ingestion de commentaires, l'harmonisation sémantique et la synthèse qualitative. Dashboard Streamlit interactif.",
     "exp.label":"// 💼 Expériences",
     "exp.melio.desc":"Soutien étudiant & climat scolaire pilotés par l'IA","exp.melio.metric":"Fonctionnalités IA · plateforme bien-être scolaire",
     "exp.nickel.desc":"Alternance Data Analyst, CX & Fraude","exp.nickel.metric":"30+ modèles dbt · 3 modèles ML fraude · 3M+ clients",
@@ -119,7 +123,7 @@ const saved = localStorage.getItem("theme");
 if (saved) { document.documentElement.setAttribute("data-theme", saved); if (saved === "dark") toggleSwitch.checked = true; }
 
 /* ===== TYPING EFFECT ===== */
-const phrases = ["Data Scientist", "ML Engineer", "Data Engineer"];
+const phrases = ["Data Scientist", "ML Engineer"];
 const typedEl = document.getElementById("typed-text");
 let pi = 0, ci = 0, del = false;
 function typeLoop() {
@@ -460,6 +464,46 @@ const modalData = {
       <li>Stratégies basées sur les données pour un climat scolaire serein</li></ul>`
     },
     skills: ["AI", "RAG", "Sentiment Analysis", "EdTech", "Business Rules", "NLP"]
+  },
+  "proj-verbatim": {
+    tag: { en: "🤖 NLP / LLM Pipeline", fr: "🤖 Pipeline TALN / LLM" },
+    title: { en: "Customer Verbatims Analyzer & Quantifier", fr: "Analyseur & Quantificateur de Verbatims Clients" },
+    date: "Python 91.0% · Streamlit · Ollama Cloud",
+    body: {
+      en: `<p>A complete, asynchronous, and modular pipeline using a remote <strong>Gemma 4</strong> model hosted on <strong>Ollama Cloud</strong> to analyze customer feedback (verbatims) and present key statistics.</p>
+      <div class="modal-gallery" style="display:flex; flex-direction:column; gap:0.8rem; margin:1.2rem 0;">
+        <img src="assets/project/verbatim-dash.png" alt="Dashboard View" style="border-radius:var(--radius); border:var(--border-light); width:100%; box-shadow:2px 2px 0 rgba(0,0,0,0.1);" />
+        <img src="assets/project/verbatim-synthesis.png" alt="Synthesis View" style="border-radius:var(--radius); border:var(--border-light); width:100%; box-shadow:2px 2px 0 rgba(0,0,0,0.1);" />
+      </div>
+      <p><strong>Core Features:</strong></p>
+      <ul>
+        <li><strong>Ingestion & In-Memory Normalization:</strong> Dynamically loads CSV or JSONL reviews, with smart auto-detection for text, language, and source columns.</li>
+        <li><strong>Ollama Cloud Client:</strong> Connects asynchronously to a distant LLM with robust regex-based JSON extraction and exponential backoff retry policies.</li>
+        <li><strong>Business Validation Layer:</strong> Leverages Pydantic schemas to validate LLM outputs (length limit, text validation, correct ID checking) before storing results.</li>
+        <li><strong>Orchestrator with Checkpoints:</strong> Batches operations, records progress locally, and enables idempotent execution (resumes exactly where it left off on errors).</li>
+        <li><strong>Semantic Theme Harmonization:</strong> Dynamically groups hundreds of free-form, model-generated themes into structured macro-categories.</li>
+        <li><strong>Qualitative Synthesis:</strong> Condenses reviews into targeted strengths and irritants per category for quick decision support.</li>
+        <li><strong>Interactive Web UI:</strong> Streamlit dashboard featuring global NPS metrics, Plotly donut charts, stacked sentiment bar charts, and a multi-criteria filterable search table.</li>
+      </ul>
+      <p><a href="https://customerverbatimsanalyzerquantifier-a9rrjkplmzgmxvj4bojxxk.streamlit.app/" target="_blank" class="accent" style="font-weight:700;text-decoration:underline;">View Live App ↗</a></p>`,
+      fr: `<p>Un pipeline asynchrone performant et modulaire s'appuyant sur un modèle <strong>Gemma 4</strong> distant sur <strong>Ollama Cloud</strong> pour analyser des retours clients et en extraire des insights quantifiables.</p>
+      <div class="modal-gallery" style="display:flex; flex-direction:column; gap:0.8rem; margin:1.2rem 0;">
+        <img src="assets/project/verbatim-dash.png" alt="Vue du Dashboard" style="border-radius:var(--radius); border:var(--border-light); width:100%; box-shadow:2px 2px 0 rgba(0,0,0,0.1);" />
+        <img src="assets/project/verbatim-synthesis.png" alt="Vue des Synthèses" style="border-radius:var(--radius); border:var(--border-light); width:100%; box-shadow:2px 2px 0 rgba(0,0,0,0.1);" />
+      </div>
+      <p><strong>Fonctionnalités Clés :</strong></p>
+      <ul>
+        <li><strong>Ingestion & Normalisation :</strong> Chargement de fichiers CSV/JSONL avec auto-détection intelligente des colonnes de texte, langue et source.</li>
+        <li><strong>Client Ollama Cloud Asynchrone :</strong> Appels HTTP asynchrones au modèle Gemma 4 avec extraction robuste de JSON et retry automatique par backoff exponentiel.</li>
+        <li><strong>Validation Métier (Pydantic) :</strong> Couche de vérification de l'intégrité de la donnée avant la persistance (longueur des thèmes, intégrité des IDs).</li>
+        <li><strong>Orchestrateur & Reprise sur erreur :</strong> Découpage en lots avec gestion de checkpoints (reprise idempotente en cas d'interruption du pipeline).</li>
+        <li><strong>Harmonisation Sémantique :</strong> Regroupement automatique par le LLM de centaines de thèmes libres uniques en macro-thématiques structurées.</li>
+        <li><strong>Synthèse Qualitative automatique :</strong> Résumé automatisé des forces et irritants par macro-catégorie pour faciliter la prise de décision.</li>
+        <li><strong>Interface Web Streamlit :</strong> Dashboard complet affichant les indicateurs clés (volume, NPS), diagrammes Plotly (donut, barres empilées) filtrables en temps réel par source, et explorateur de commentaires multi-critères.</li>
+      </ul>
+      <p><a href="https://customerverbatimsanalyzerquantifier-a9rrjkplmzgmxvj4bojxxk.streamlit.app/" target="_blank" class="accent" style="font-weight:700;text-decoration:underline;">Voir le Live ↗</a></p>`
+    },
+    skills: ["Python", "Streamlit", "Ollama", "Gemma 4", "Pydantic", "Plotly", "Asynchronous HTTP", "NLP"]
   }
 };
 
