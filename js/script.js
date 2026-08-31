@@ -4,30 +4,30 @@ const i18n = {
     "nav.home":"Home","nav.about":"About","nav.projects":"Projects","nav.exp":"Experience",
     "nav.stack":"Stack","nav.edu":"Education","nav.contact":"Contact","nav.resume":"Resume ↓",
     "hero.label":"// Data & AI",
-    "hero.desc":"I transform raw data into decisions and concrete tools: reliable pipelines, predictive models, applied AI. I enjoy diving into analysis as much as presenting results to business teams — and building solutions that take real-world constraints into account (GDPR, sensitive data, field usage).",
+    "hero.desc":"I transform raw data into decisions and concrete tools: reliable pipelines, predictive models, applied AI. I enjoy diving into analysis as much as presenting results to business teams - and building solutions that take real-world constraints into account (GDPR, sensitive data, field usage).",
     "hero.cta1":"View Projects →","hero.cta2":"Get In Touch",
     "about.label":"// About","about.h2a":"Data,","about.h2b":"from the field to decisions",
-    "about.text":"My background intersects two worlds: regulated Fintech (Nickel / BNP Paribas), where I worked on production data pipelines, scoring and fraud detection models, and dashboards used daily by business teams — and AI applied to high-stakes use cases (healthcare, social impact), where I explore deep learning, NLP, and LLM/agent architectures.\n\nWhat I take away from these experiences: technology only has value if it meets a real need. I like to understand a problem before choosing the tool, whether it is an ML model, a dashboard, or a no-code prototype — and know how to explain my choices to both experts and non-technical teams.",
+    "about.text":"My background intersects two worlds: regulated Fintech (Nickel / BNP Paribas), where I worked on production data pipelines, scoring and fraud detection models, and dashboards used daily by business teams - and AI applied to high-stakes use cases (healthcare, social impact), where I explore deep learning, NLP, and LLM/agent architectures.\n\nWhat I take away from these experiences: technology only has value if it meets a real need. I like to understand a problem before choosing the tool, whether it is an ML model, a dashboard, or a no-code prototype - and know how to explain my choices to both experts and non-technical teams.",
     "about.stat1":"Projects","about.stat2":"Masters","about.stat3":"Experiences",
     "proj.label":"// Projects","proj.h2":"Featured Work",
-    "proj.finder.title":"Finder Bot — Geolocation AI","proj.finder.tag":"🏆 Master's Thesis",
+    "proj.finder.title":"Finder Bot - Geolocation AI","proj.finder.tag":"🏆 Master's Thesis",
     "proj.finder.desc":"Hybrid LLM-RAG geolocation assistant. Graph-based spatial reasoning + SAR probability modeling. MIT Licensed.",
     "proj.fetal.title":"Fetal Ultrasound Classification","proj.fetal.tag":"🏥 Medical AI",
     "proj.fetal.desc":"EfficientNet-B0 for automated fetal plane identification with Grad-CAM. 92% accuracy, F1 macro 0.91.",
     "proj.asthme.title":"Asthma Dashboard","proj.asthme.tag":"📊 Public Health",
     "proj.asthme.desc":"Interactive dashboard on asthma ER visits, pollen & air pollution in France. Deployed on AWS via Docker.",
-    "proj.lexi.title":"LexiBot — Legal Chatbot","proj.lexi.tag":"NLP / RAG",
+    "proj.lexi.title":"LexiBot - Legal Chatbot","proj.lexi.tag":"NLP / RAG",
     "proj.lexi.desc":"Hybrid semantic + BM25 RAG over 200+ pages of legal PDF. Multi-query decomposition.",
-    "proj.immo.title":"ImmoViz — Real Estate","proj.immo.tag":"Data Viz",
+    "proj.immo.title":"ImmoViz - Real Estate","proj.immo.tag":"Data Viz",
     "proj.immo.desc":"Interactive geospatial dashboard for French real estate exploration.",
-    "proj.melio.title":"Mélio — AI Support","proj.melio.tag":"AI / EdTech",
+    "proj.melio.title":"Mélio - AI Support","proj.melio.tag":"AI / EdTech",
     "proj.melio.desc":"Detection of school distress via business rules and semantic search (RAG). AI for school climate.",
     "proj.verbatim.title":"Customer Verbatims Analyzer","proj.verbatim.tag":"🤖 NLP / LLM Pipeline",
     "proj.verbatim.desc":"Asynchronous LLM pipeline (Gemma 4 via Ollama Cloud) for ingesting customer reviews, semantic theme harmonization, and qualitative synthesis. Features a real-time Streamlit dashboard.",
     "exp.label":"// 💼 Experience",
     "exp.melio.desc":"AI-driven student support & school climate","exp.melio.metric":"AI features · school well-being platform",
     "exp.nickel.desc":"Data Analyst CX & Fraud Apprentice","exp.nickel.metric":"30+ dbt models · 3 fraud ML models · 3M+ customers",
-    "exp.singa.desc":"Data Analyst — Monitoring & Evaluation","exp.singa.metric":"Social impact metrics across 5+ countries · Salesforce CRM",
+    "exp.singa.desc":"Data Analyst - Monitoring & Evaluation","exp.singa.metric":"Social impact metrics across 5+ countries · Salesforce CRM",
     "exp.hub.desc":"Innovation hub management","exp.hub.metric":"200+ students · 3 innovation programs",
     "exp.aff.desc":"Platform architecture & team coordination","exp.aff.metric":"Platform for 50+ stakeholders",
     "exp.agrosfer.desc":"AgriTech sprint planning & data processing","exp.agrosfer.metric":"AgriTech · MVP delivery",
@@ -41,30 +41,30 @@ const i18n = {
     "nav.home":"Accueil","nav.about":"À propos","nav.projects":"Projets","nav.exp":"Expériences",
     "nav.stack":"Outils","nav.edu":"Formation","nav.contact":"Contact","nav.resume":"CV ↓",
     "hero.label":"// Data & IA",
-    "hero.desc":"Je transforme des données brutes en décisions et en outils concrets : pipelines fiables, modèles prédictifs, IA appliquée. J'aime autant plonger dans l'analyse que présenter des résultats à des équipes métier — et construire des solutions qui tiennent compte des vraies contraintes (RGPD, données sensibles, usages terrain).",
+    "hero.desc":"Je transforme des données brutes en décisions et en outils concrets : pipelines fiables, modèles prédictifs, IA appliquée. J'aime autant plonger dans l'analyse que présenter des résultats à des équipes métier - et construire des solutions qui tiennent compte des vraies contraintes (RGPD, données sensibles, usages terrain).",
     "hero.cta1":"Voir les projets →","hero.cta2":"Me contacter",
     "about.label":"// À propos","about.h2a":"Data,","about.h2b":"du terrain à la décision",
-    "about.text":"Mon parcours croise deux mondes : la Fintech régulée (Nickel / BNP Paribas), où j'ai travaillé sur des pipelines de données en production, des modèles de scoring et de détection de fraude, et des dashboards utilisés au quotidien par les équipes métier — et l'IA appliquée à des cas d'usage à fort enjeu (santé, impact social), où j'explore le deep learning, le NLP et les architectures LLM/agents.\n\nCe que je retiens de ces expériences : la technique n'a de valeur que si elle répond à un vrai besoin. J'aime comprendre un problème avant de choisir l'outil, qu'il s'agisse d'un modèle de ML, d'un dashboard, ou d'un prototype no-code — et savoir expliquer mes choix aussi bien à des experts qu'à des équipes non techniques.",
+    "about.text":"Mon parcours croise deux mondes : la Fintech régulée (Nickel / BNP Paribas), où j'ai travaillé sur des pipelines de données en production, des modèles de scoring et de détection de fraude, et des dashboards utilisés au quotidien par les équipes métier - et l'IA appliquée à des cas d'usage à fort enjeu (santé, impact social), où j'explore le deep learning, le NLP et les architectures LLM/agents.\n\nCe que je retiens de ces expériences : la technique n'a de valeur que si elle répond à un vrai besoin. J'aime comprendre un problème avant de choisir l'outil, qu'il s'agisse d'un modèle de ML, d'un dashboard, ou d'un prototype no-code - et savoir expliquer mes choix aussi bien à des experts qu'à des équipes non techniques.",
     "about.stat1":"Projets","about.stat2":"Masters","about.stat3":"Expériences",
     "proj.label":"// Projets","proj.h2":"Travaux Sélectionnés",
-    "proj.finder.title":"Finder Bot — IA de Géolocalisation","proj.finder.tag":"🏆 Mémoire de Master",
+    "proj.finder.title":"Finder Bot - IA de Géolocalisation","proj.finder.tag":"🏆 Mémoire de Master",
     "proj.finder.desc":"Assistant de géolocalisation hybride LLM-RAG. Raisonnement spatial par graphe + modélisation probabiliste SAR.",
     "proj.fetal.title":"Classification d'Échographies Fœtales","proj.fetal.tag":"🏥 IA Médicale",
     "proj.fetal.desc":"EfficientNet-B0 pour l'identification automatique des plans fœtaux par échographie. 92% de précision, F1 macro 0,91.",
     "proj.asthme.title":"Dashboard Asthme","proj.asthme.tag":"📊 Santé Publique",
     "proj.asthme.desc":"Dashboard interactif sur les passages aux urgences pour asthme, pollens et pollution en France. Déployé sur AWS via Docker.",
-    "proj.lexi.title":"LexiBot — Chatbot Juridique","proj.lexi.tag":"TALN / RAG",
+    "proj.lexi.title":"LexiBot - Chatbot Juridique","proj.lexi.tag":"TALN / RAG",
     "proj.lexi.desc":"Chatbot RAG hybride (sémantique + BM25) sur 200+ pages de documents juridiques. Décomposition multi-requêtes.",
-    "proj.immo.title":"ImmoViz — Immobilier","proj.immo.tag":"Data Viz",
+    "proj.immo.title":"ImmoViz - Immobilier","proj.immo.tag":"Data Viz",
     "proj.immo.desc":"Dashboard géospatial interactif pour l'exploration du marché immobilier français.",
-    "proj.melio.title":"Mélio — Soutien par l'IA","proj.melio.tag":"IA / EdTech",
+    "proj.melio.title":"Mélio - Soutien par l'IA","proj.melio.tag":"IA / EdTech",
     "proj.melio.desc":"Détection de la détresse scolaire par règles métier et recherche sémantique (RAG). IA pour le climat scolaire.",
     "proj.verbatim.title":"Analyseur de Verbatims","proj.verbatim.tag":"🤖 Pipeline TALN / LLM",
     "proj.verbatim.desc":"Pipeline LLM asynchrone (Gemma 4 via Ollama Cloud) pour l'ingestion de commentaires, l'harmonisation sémantique et la synthèse qualitative. Dashboard Streamlit interactif.",
     "exp.label":"// 💼 Expériences",
     "exp.melio.desc":"Soutien étudiant & climat scolaire pilotés par l'IA","exp.melio.metric":"Fonctionnalités IA · plateforme bien-être scolaire",
     "exp.nickel.desc":"Alternance Data Analyst, CX & Fraude","exp.nickel.metric":"30+ modèles dbt · 3 modèles ML fraude · 3M+ clients",
-    "exp.singa.desc":"Data Analyst — Suivi & Évaluation","exp.singa.metric":"Mesure d'impact sur 5+ pays · CRM Salesforce",
+    "exp.singa.desc":"Data Analyst - Suivi & Évaluation","exp.singa.metric":"Mesure d'impact sur 5+ pays · CRM Salesforce",
     "exp.hub.desc":"Gestion du hub d'innovation","exp.hub.metric":"200+ étudiants · 3 programmes d'innovation",
     "exp.aff.desc":"Architecture plateforme & coordination équipe","exp.aff.metric":"Plateforme pour 50+ parties prenantes",
     "exp.agrosfer.desc":"Planification sprint AgriTech & traitement de données","exp.agrosfer.metric":"AgriTech · livraison MVP",
@@ -76,7 +76,7 @@ const i18n = {
   }
 };
 
-let currentLang = localStorage.getItem("lang") || "en";
+let currentLang = localStorage.getItem("lang") || "fr";
 
 function setLang(lang) {
   currentLang = lang;
@@ -123,7 +123,7 @@ const saved = localStorage.getItem("theme");
 if (saved) { document.documentElement.setAttribute("data-theme", saved); if (saved === "dark") toggleSwitch.checked = true; }
 
 /* ===== TYPING EFFECT ===== */
-const phrases = ["Data Scientist", "ML Engineer"];
+const phrases = ["Data Analyst", "Consultant DATA / IA"];
 const typedEl = document.getElementById("typed-text");
 let pi = 0, ci = 0, del = false;
 function typeLoop() {
@@ -179,8 +179,8 @@ if (d) d.textContent = new Date().getFullYear();
 const modalData = {
   "edu-m2": {
     tag: { en: "🎓 Education", fr: "🎓 Formation" },
-    title: { en: "Master in Health Data Science", fr: "Master Ingénierie de la Santé — Data Science en Santé" },
-    date: { en: "August 2024 — July 2026", fr: "Août 2024 — Juillet 2026" },
+    title: { en: "Master in Health Data Science", fr: "Master Ingénierie de la Santé - Data Science en Santé" },
+    date: { en: "August 2024 - July 2026", fr: "Août 2024 - Juillet 2026" },
     body: {
       en: `<p>Master's degree at Université de Lille (ILIS), specialising in Data Science applied to the health sector.</p>
       <ul><li>Machine Learning & Deep Learning for medical data</li><li>Medical image analysis and Computer Vision</li>
@@ -196,7 +196,7 @@ const modalData = {
   "edu-epitech": {
     tag: { en: "🎓 Education", fr: "🎓 Formation" },
     title: "Master in Digital Transformation",
-    date: { en: "September 2022 — July 2024", fr: "Septembre 2022 — Juillet 2024" },
+    date: { en: "September 2022 - July 2024", fr: "Septembre 2022 - Juillet 2024" },
     body: {
       en: `<p>Master's degree at Epitech, focused on IT management, innovation, and digital transformation.</p>
       <ul><li>IT project management (Agile, Scrum)</li><li>Cloud architecture and DevOps (AWS, Docker, CI/CD)</li>
@@ -209,8 +209,8 @@ const modalData = {
   },
   "edu-bsc": {
     tag: { en: "🎓 Education", fr: "🎓 Formation" },
-    title: { en: "Bachelor in IT Expertise — Software Engineering", fr: "Bachelor en Expertise Informatique — Génie Logiciel" },
-    date: "2019 — 2022",
+    title: { en: "Bachelor in IT Expertise - Software Engineering", fr: "Bachelor en Expertise Informatique - Génie Logiciel" },
+    date: "2019 - 2022",
     body: {
       en: `<p>Bachelor's degree at Epitech (European Institute of Technology), a project-based learning institution renowned for hands-on software engineering.</p>
       <ul><li>Full-stack web development (HTML, CSS, JS, React)</li><li>Systems programming in C and C++</li>
@@ -225,8 +225,8 @@ const modalData = {
   },
   "exp-melio": {
     tag: { en: "💼 Current Intervention", fr: "💼 Intervention actuelle" },
-    title: "AI Developer — Mélio",
-    date: { en: "February 2026 — Present", fr: "Février 2026 — Présent" },
+    title: "AI Developer - Mélio",
+    date: { en: "February 2026 - Present", fr: "Février 2026 - Présent" },
     body: {
       en: `<p>Contributing to AI features at <strong>Mélio</strong>, a platform dedicated to student emotional support and improved school climate.</p>
       <ul><li>Developing and optimising AI models for emotional analysis and support</li>
@@ -241,8 +241,8 @@ const modalData = {
   },
   "exp-nickel": {
     tag: { en: "💼 Current Position", fr: "💼 Poste actuel" },
-    title: { en: "Data Analyst — CX & Fraud", fr: "Data Analyst — CX & Fraude" },
-    date: { en: "September 2025 — Present · Nantes, France", fr: "Septembre 2025 — Présent · Nantes, France" },
+    title: { en: "Data Analyst - CX & Fraud", fr: "Data Analyst - CX & Fraude" },
+    date: { en: "September 2025 - Present · Nantes, France", fr: "Septembre 2025 - Présent · Nantes, France" },
     body: {
       en: `<p>Data Analyst in Customer Experience & Fraud at <strong>Nickel</strong> (BNP Paribas), a neobank serving 3M+ customers across Europe.</p>
       <p><strong>Decision Support & Data Engineering:</strong></p>
@@ -275,8 +275,8 @@ const modalData = {
   },
   "exp-singa": {
     tag: { en: "💼 Experience", fr: "💼 Expérience" },
-    title: { en: "Data Analyst — Monitoring & Evaluation", fr: "Data Analyst — Suivi & Évaluation" },
-    date: { en: "April 2025 — August 2025 · Paris, France", fr: "Avril 2025 — Août 2025 · Paris, France" },
+    title: { en: "Data Analyst - Monitoring & Evaluation", fr: "Data Analyst - Suivi & Évaluation" },
+    date: { en: "April 2025 - August 2025 · Paris, France", fr: "Avril 2025 - Août 2025 · Paris, France" },
     body: {
       en: `<p>Data Analyst for Monitoring & Evaluation at <strong>SINGA</strong>, an international organisation supporting newcomers' integration through entrepreneurship.</p>
       <p><strong>Framework & Harmonization:</strong></p>
@@ -299,13 +299,13 @@ const modalData = {
   },
   "exp-hub": {
     tag: { en: "💼 Experience", fr: "💼 Expérience" },
-    title: { en: "Hub Manager — Epitech Benin", fr: "Hub Manager — Epitech Bénin" },
-    date: { en: "September 2022 — July 2024 · Cotonou, Benin", fr: "Septembre 2022 — Juillet 2024 · Cotonou, Bénin" },
+    title: { en: "Hub Manager - Epitech Benin", fr: "Hub Manager - Epitech Bénin" },
+    date: { en: "September 2022 - July 2024 · Cotonou, Benin", fr: "Septembre 2022 - Juillet 2024 · Cotonou, Bénin" },
     body: {
       en: `<p>Managed the Innovation Hub at <strong>Epitech Benin</strong> for nearly 2 years, overseeing 200+ students and multiple innovation projects.</p>
       <ul><li>Development and management of 10+ hub projects and activities</li>
       <li>Nearly 200 students monitored and coached</li><li>Over 5 Open Innovation projects completed</li>
-      <li><strong>Fiscathon</strong>: Tax Hackathon with the General Directorate of Taxes of Benin — facilitated recruitment, planning, and IT coaching</li>
+      <li><strong>Fiscathon</strong>: Tax Hackathon with the General Directorate of Taxes of Benin - facilitated recruitment, planning, and IT coaching</li>
       <li><strong>Robotic Arm</strong>: Defined requirements, schedule, and specifications with students</li></ul>`,
       fr: `<p>Gestion du Hub d'Innovation à <strong>Epitech Bénin</strong> pendant près de 2 ans, encadrant 200+ étudiants et plusieurs projets innovants.</p>
       <ul><li>Développement et gestion de 10+ projets et activités du hub</li>
@@ -317,8 +317,8 @@ const modalData = {
   },
   "exp-aff": {
     tag: { en: "💼 Experience", fr: "💼 Expérience" },
-    title: { en: "IT Project Manager — Africa Fintech Forum", fr: "Chef de Projet IT — Africa Fintech Forum" },
-    date: { en: "May 2022 — September 2022 · Abidjan, Côte d'Ivoire", fr: "Mai 2022 — Septembre 2022 · Abidjan, Côte d'Ivoire" },
+    title: { en: "IT Project Manager - Africa Fintech Forum", fr: "Chef de Projet IT - Africa Fintech Forum" },
+    date: { en: "May 2022 - September 2022 · Abidjan, Côte d'Ivoire", fr: "Mai 2022 - Septembre 2022 · Abidjan, Côte d'Ivoire" },
     body: {
       en: `<p>IT Project Manager at <strong>Africa Fintech Forum</strong>, a pan-African fintech event and platform.</p>
       <ul><li>Built an IT team to develop the company's digital platforms</li>
@@ -337,8 +337,8 @@ const modalData = {
   },
   "exp-acumen": {
     tag: { en: "💼 Experience", fr: "💼 Expérience" },
-    title: { en: "Assistant Project Manager — Agrosfer", fr: "Assistant Chef de Projet — Agrosfer" },
-    date: { en: "July 2020 — November 2020 · Cotonou, Benin", fr: "Juillet 2020 — Novembre 2020 · Cotonou, Bénin" },
+    title: { en: "Assistant Project Manager - Agrosfer", fr: "Assistant Chef de Projet - Agrosfer" },
+    date: { en: "July 2020 - November 2020 · Cotonou, Benin", fr: "Juillet 2020 - Novembre 2020 · Cotonou, Bénin" },
     body: {
       en: `<p>Assistant PM at <strong>Agrosfer</strong> (formerly Acumen Network), supporting AgriTech development projects in West Africa.</p>
       <ul><li>Development sprint planning and task tracking</li>
@@ -351,27 +351,27 @@ const modalData = {
   },
   "proj-finder": {
     tag: { en: "🏆 Master's Thesis", fr: "🏆 Mémoire de Master" },
-    title: "Finder Bot — Geolocation AI Assistant",
+    title: "Finder Bot - Geolocation AI Assistant",
     date: "Python 80.4% · JavaScript 13.1% · CSS 3.6% · HTML 2.3%",
     body: {
-      en: `<p>Hybrid <strong>LLM-RAG</strong> geolocation assistant — Master's thesis project. Real-time location of missing persons using sovereign AI.</p>
+      en: `<p>Hybrid <strong>LLM-RAG</strong> geolocation assistant - Master's thesis project. Real-time location of missing persons using sovereign AI.</p>
       <p><strong>Problem:</strong></p><ul><li>Locate missing persons in real time without externalizing sensitive data</li></ul>
       <p><strong>Solution:</strong></p>
       <ul><li>Local LLM (Ollama) + Bayesian engine on 12M+ points of interest</li>
       <li>Graph-based spatial reasoning + SAR-inspired probability modeling</li>
       <li>RAG pipeline for contextual document retrieval</li></ul>
       <p><strong>Impact:</strong></p>
-      <ul><li>Full GDPR sovereignty — zero externalized data</li>
+      <ul><li>Full GDPR sovereignty - zero externalized data</li>
       <li>Modular API architecture with agentic testing framework</li></ul>
       <p><a href="https://abd2k27.github.io/Finder_bot/" target="_blank" class="accent" style="font-weight:700;text-decoration:underline;">View Live Demo ↗</a></p>`,
-      fr: `<p>Assistant de géolocalisation hybride <strong>LLM-RAG</strong> — projet de mémoire de Master. Localisation en temps réel de personnes disparues via une IA souveraine.</p>
+      fr: `<p>Assistant de géolocalisation hybride <strong>LLM-RAG</strong> - projet de mémoire de Master. Localisation en temps réel de personnes disparues via une IA souveraine.</p>
       <p><strong>Problématique :</strong></p><ul><li>Localiser des personnes disparues en temps réel sans externaliser les données sensibles</li></ul>
       <p><strong>Solution :</strong></p>
       <ul><li>LLM local (Ollama) + moteur bayésien sur 12M+ points d'intérêt</li>
       <li>Raisonnement spatial par graphe + modélisation probabiliste SAR</li>
       <li>Pipeline RAG pour la récupération contextuelle de documents</li></ul>
       <p><strong>Impact :</strong></p>
-      <ul><li>Souveraineté RGPD totale — zéro données externalisées</li>
+      <ul><li>Souveraineté RGPD totale - zéro données externalisées</li>
       <li>Architecture API modulaire avec framework de tests agentiques</li></ul>
       <p><a href="https://abd2k27.github.io/Finder_bot/" target="_blank" class="accent" style="font-weight:700;text-decoration:underline;">Voir la démo ↗</a></p>`
     },
@@ -393,7 +393,7 @@ const modalData = {
   },
   "proj-lexi": {
     tag: { en: "NLP / RAG", fr: "TALN / RAG" },
-    title: { en: "LexiBot — Legal RAG Chatbot", fr: "LexiBot — Chatbot RAG Juridique" },
+    title: { en: "LexiBot - Legal RAG Chatbot", fr: "LexiBot - Chatbot RAG Juridique" },
     date: "Python 100%",
     body: {
       en: `<p>RAG chatbot answering questions about legal documents (200+ pages of Benin's Digital Code).</p>
@@ -409,7 +409,7 @@ const modalData = {
   },
   "proj-immo": {
     tag: { en: "Data Visualization", fr: "Visualisation de Données" },
-    title: { en: "ImmoViz — French Real Estate Dashboard", fr: "ImmoViz — Dashboard Immobilier Français" },
+    title: { en: "ImmoViz - French Real Estate Dashboard", fr: "ImmoViz - Dashboard Immobilier Français" },
     date: { en: "Streamlit App", fr: "Application Streamlit" },
     body: {
       en: `<p>Interactive geospatial dashboard for exploring the French real estate market.</p>
@@ -423,7 +423,7 @@ const modalData = {
   },
   "proj-asthme": {
     tag: { en: "Health Data Dashboard", fr: "Dashboard Santé Publique" },
-    title: { en: "Asthma Dashboard — Public Health Viz", fr: "Dashboard Asthme — Santé Publique" },
+    title: { en: "Asthma Dashboard - Public Health Viz", fr: "Dashboard Asthme - Santé Publique" },
     date: "Python 94.2% · CSS 5.2% · Docker 0.6%",
     body: {
       en: `<p>Interactive dashboard visualizing asthma emergency visits, pollen, and pollutants in France.</p>
@@ -439,8 +439,8 @@ const modalData = {
   },
   "exp-melio": {
     tag: { en: "💼 Current Intervention", fr: "💼 Intervention actuelle" },
-    title: { en: "AI Developer — Mélio", fr: "Développeur IA — Mélio" },
-    date: { en: "October 2025 — Present", fr: "Octobre 2025 — Présent" },
+    title: { en: "AI Developer - Mélio", fr: "Développeur IA - Mélio" },
+    date: { en: "October 2025 - Present", fr: "Octobre 2025 - Présent" },
     body: {
       en: `<p>Working on AI features for <strong>Mélio</strong>, focusing on student emotional support and school climate.</p>
       <ul><li>Developing AI models for emotional analysis</li><li>Fostering safe educational environments via data insights</li></ul>`,
@@ -451,7 +451,7 @@ const modalData = {
   },
   "proj-melio": {
     tag: { en: "AI / EdTech", fr: "IA / EdTech" },
-    title: { en: "Mélio — AI School Distress Detection", fr: "Mélio — Détection de Détresse Scolaire par IA" },
+    title: { en: "Mélio - AI School Distress Detection", fr: "Mélio - Détection de Détresse Scolaire par IA" },
     date: { en: "Collaborative Project", fr: "Projet Collaboratif" },
     body: {
       en: `<p>An innovative platform detecting school distress and supporting educational teams via AI.</p>

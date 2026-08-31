@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 /* ===== TOKENS ===== */
 :root {
@@ -14,9 +14,9 @@
   --shadow: 4px 4px 0px #222;
   --shadow-hover: 6px 6px 0px #222;
   --radius: 4px;
-  --font-h: 'Bangers', cursive;
-  --font-hand: 'Patrick Hand', cursive;
-  --font-b: 'Inter', sans-serif;
+  --font-h: 'Space Grotesk', sans-serif;
+  --font-hand: 'DM Sans', sans-serif;
+  --font-b: 'DM Sans', sans-serif;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 [data-theme="dark"] {
@@ -166,6 +166,11 @@ h1,h2,h3 { font-family:var(--font-h); letter-spacing:1.5px; }
 }
 .hero-typing::after { content:'|'; animation:blink 0.8s step-end infinite; font-weight:300; }
 @keyframes blink { 50%{opacity:0} }
+.hero-subtitle {
+  font-size:1.1rem; font-weight:700; color:var(--accent);
+  font-family:var(--font-h); letter-spacing:2px;
+  text-transform:uppercase; margin:0.2rem 0 0.1rem;
+}
 .hero-desc { color:var(--text-muted); font-size:0.92rem; max-width:400px; margin-bottom:0.8rem; }
 .hero-cta { display:flex; gap:0.8rem; flex-wrap:wrap; }
 
