@@ -1,308 +1,587 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abdou - Data Scientist</title>
-  <meta name="description" content="Portfolio of Abdou Wahab Dossou - Data Scientist. Dual expertise in Fintech data engineering (Nickel / BNP Paribas) and AI applied to healthcare."/>
+  <title>Abdou Wahab Dossou • Consultant Junior Data & IA</title>
+  <meta name="description" content="Portfolio d'Abdou Wahab Dossou - Consultant Junior Data & IA. Double expertise en ingénierie de données / détection de fraude Fintech (Nickel / BNP Paribas) et IA appliquée à la santé (Master ILIS Lille)."/>
   <link rel="icon" type="image/x-icon" href="assets/favicon/Abdou-Logo.ico"/>
+  
+  <!-- Paperline Fonts : Geist, Geist Mono, Caveat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/style.css"/>
-
-  <!-- SVG Filter for hand-drawn effect -->
-  <svg style="position:absolute;width:0;height:0;">
-    <filter id="sketchy">
-      <feTurbulence type="turbulence" baseFrequency="0.012" numOctaves="3" result="noise" seed="2"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <filter id="sketchy-strong">
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="4" result="noise" seed="5"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-  </svg>
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===== FLOATING PILL NAVBAR ===== -->
   <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo"><img src="./assets/favicon/Abdou-Logo.ico" alt="Abdou Logo"/></a>
+    <div class="nav-pill">
+      <a href="#" class="nav-logo">
+        <img src="./assets/favicon/Abdou-Logo.ico" alt="Abdou Logo"/>
+        <span class="nav-logo-text">abdou.dossou</span>
+      </a>
       <ul class="nav-menu">
-        <li><a class="nav-link" href="#hero" data-i18n="nav.home">Home</a></li>
-        <li><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
-        <li><a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a></li>
-        <li><a class="nav-link" href="#experience" data-i18n="nav.exp">Experience</a></li>
-        <li><a class="nav-link" href="#stack" data-i18n="nav.stack">Stack</a></li>
-        <li><a class="nav-link" href="#journey" data-i18n="nav.edu">Education</a></li>
-        <li><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
-        <li><a class="nav-link btn-resume" href="./assets/Abdou_cv_fr.pdf" download data-i18n="nav.resume">CV ↓</a></li>
-        <button id="lang-btn" class="lang-btn" onclick="toggleLang()">FR</button>
-        <div class="theme-switch">
-          <input type="checkbox" id="switch"/>
-          <label class="toggle-icons" for="switch">
-            <img class="sun" src="assets/sun.svg" alt="Light"/>
-            <img class="moon" src="assets/moon.svg" alt="Dark"/>
-          </label>
-        </div>
+        <li><a class="nav-link" href="#works" data-i18n="nav.works">[works]</a></li>
+        <li><a class="nav-link" href="#experience" data-i18n="nav.exp">[experience]</a></li>
+        <li><a class="nav-link" href="#education" data-i18n="nav.edu">[education]</a></li>
+        <li><a class="nav-link" href="#toolkit" data-i18n="nav.toolkit">[toolkit]</a></li>
+        <li><a class="nav-link" href="#contact" data-i18n="nav.contact">[contact]</a></li>
+        <li><a class="nav-link btn-nav-action" href="./assets/Abdou_cv_fr.pdf" download data-i18n="nav.resume">CV [↓]</a></li>
       </ul>
-      <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+      <div class="nav-controls">
+        <button id="lang-btn" class="lang-btn" onclick="toggleLang()">EN</button>
+        <button id="theme-btn" class="theme-toggle" onclick="toggleTheme()" title="Changer le thème">
+          <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- ===== BENTO GALLERY ===== -->
-  <main class="gallery">
+  <!-- ===== MAIN PAPERLINE CONTAINER ===== -->
+  <main class="paperline-container">
 
-    <!-- 1. HERO CARD -->
-    <section class="card card-hero" id="hero">
-      <div class="manga-lines top-right"></div>
-      <img class="hero-avatar" src="assets/my-avatar.png" alt="Abdou Wahab Dossou"/>
-      <div class="hero-text">
-        <p class="card-label" data-i18n="hero.label">// Data Scientist</p>
-        <h1>Hi, I'm <span class="accent">Abdou</span></h1>
-        <p class="hero-subtitle">Consultant DATA / IA</p>
-        <p class="hero-typing" id="typed-text"></p>
-        <p class="hero-desc" data-i18n="hero.desc">Data Scientist with dual expertise: data engineering and fraud detection in regulated Fintech (Nickel / BNP Paribas), and AI modeling in healthcare (fetal diagnostics, missing persons search). I build robust ML systems under real-world constraints.</p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn-ink" data-i18n="hero.cta1">View Projects →</a>
-          <a href="#contact" class="btn-outline" data-i18n="hero.cta2">Get In Touch</a>
+    <!-- 1. HERO SECTION (PAPERLINE BENCH) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-main">
+        <div class="hero-header-tags">
+          <span class="tag-bracket">[start here]</span>
+          <span class="tag-bracket">[hero section]</span>
+          <span class="japanese-note">おかえりなさい。</span>
+        </div>
+        <h1 class="hero-title">Abdou Wahab Dossou</h1>
+        <div class="hero-role-chip">
+          <span class="dot"></span>
+          <span data-i18n="hero.role">[role: consultant junior data & ia]</span>
+        </div>
+        <p class="hero-desc" data-i18n="hero.desc">Consultant Data & IA avec une double expertise : industrialisation de pipelines de données et modélisation de fraude en Fintech régulée (Nickel / BNP Paribas), et IA appliquée à la santé (Master Data Science en Santé - ILIS Université de Lille). Je conçois des systèmes ML fiables, robustes et à fort impact métier sous contraintes réelles.</p>
+        <div class="hero-actions">
+          <a href="#works" class="btn-paperline" data-i18n="hero.cta1">[selected works ↓]</a>
+          <a href="#contact" class="btn-paperline-secondary" data-i18n="hero.cta2">[get in touch →]</a>
+          <a href="https://www.linkedin.com/in/wahabdossou/" target="_blank" class="btn-paperline-secondary">LinkedIn [↗]</a>
         </div>
       </div>
-    </section>
 
-    <!-- 2. ABOUT CARD -->
-    <section class="card card-about" id="about">
-      <p class="card-label" data-i18n="about.label">// About</p>
-      <h2><span data-i18n="about.h2a">Data Science,</span><br/><span class="accent" data-i18n="about.h2b">Two Fields</span></h2>
-      <p class="card-text" data-i18n="about.text">In Fintech, I industrialize data pipelines in production (dbt, BigQuery, SQL) and build fraud detection and customer scoring models at Nickel (BNP Paribas). In healthcare, I apply deep learning to medical imaging and NLP to clinical data as part of my Master's in Health Data Science (ILIS – Université de Lille). Two domains, one standard: reliable models, clean data, measurable impact.</p>
-      <div class="about-stats">
-        <div class="stat"><span class="stat-num" data-target="7">0</span><span class="stat-lbl" data-i18n="about.stat1">Projects</span></div>
-        <div class="stat"><span class="stat-num" data-target="2">0</span><span class="stat-lbl" data-i18n="about.stat2">Masters</span></div>
-        <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-lbl" data-i18n="about.stat3">Experiences</span></div>
-      </div>
-    </section>
-
-    <!-- 3. PROJECTS CARD -->
-    <section class="card card-projects" id="projects">
-      <p class="card-label" data-i18n="proj.label">// Projects</p>
-      <h2 data-i18n="proj.h2">Featured Work</h2>
-      <div class="projects-list">
-
-        <!-- Featured tier (3 prominent) -->
-        <div class="proj-featured-grid">
-          <article class="proj-item proj-featured" data-modal="proj-finder">
-            <div class="proj-header">
-              <span class="proj-tag" data-i18n="proj.finder.tag">🏆 Master's Thesis</span>
-              <h3 data-i18n="proj.finder.title">Finder Bot - Geolocation AI</h3>
-            </div>
-            <p data-i18n="proj.finder.desc">Hybrid LLM-RAG geolocation assistant. Graph-based spatial reasoning + SAR probability modeling. MIT Licensed.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Python</span><span>LLM</span><span>RAG</span><span>SQLite</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/Finder_bot" target="_blank">GitHub ↗</a><a href="https://abd2k27.github.io/Finder_bot/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item proj-featured" data-modal="proj-fetal">
-            <div class="proj-header">
-              <span class="proj-tag" data-i18n="proj.fetal.tag">🏥 Medical AI</span>
-              <h3 data-i18n="proj.fetal.title">Fetal Ultrasound Classification</h3>
-            </div>
-            <p data-i18n="proj.fetal.desc">EfficientNet-B0 for automated fetal plane identification with Grad-CAM. 99.46% recall on fetal brain.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>PyTorch</span><span>EfficientNet</span><span>Grad-CAM</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/fetal-ultrasound-classification" target="_blank">GitHub ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item proj-featured" data-modal="proj-asthme">
-            <div class="proj-header">
-              <span class="proj-tag" data-i18n="proj.asthme.tag">📊 Public Health</span>
-              <h3 data-i18n="proj.asthme.title">Asthma Dashboard</h3>
-            </div>
-            <p data-i18n="proj.asthme.desc">Interactive dashboard on asthma ER visits, pollen & air pollution in France. Deployed on AWS via Docker.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Dash</span><span>Selenium</span><span>Docker</span><span>AWS</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/asthme-dash" target="_blank">GitHub ↗</a><a href="https://sijkhavkmx.eu-west-3.awsapprunner.com/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Secondary tier -->
-        <div class="proj-row">
-          <article class="proj-item" data-modal="proj-lexi">
-            <div class="proj-header"><span class="proj-tag" data-i18n="proj.lexi.tag">NLP / RAG</span><h3 data-i18n="proj.lexi.title">LexiBot - Legal Chatbot</h3></div>
-            <p data-i18n="proj.lexi.desc">Hybrid semantic + BM25 RAG over 200+ pages of legal PDF. Multi-query decomposition.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Streamlit</span><span>ChromaDB</span><span>BM25</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/LexiBot---RAG" target="_blank">GitHub ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item" data-modal="proj-immo">
-            <div class="proj-header"><span class="proj-tag" data-i18n="proj.immo.tag">Data Viz</span><h3 data-i18n="proj.immo.title">ImmoViz - Real Estate</h3></div>
-            <p data-i18n="proj.immo.desc">Interactive geospatial dashboard for French real estate exploration.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Streamlit</span><span>Leaflet</span><span>Pandas</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/ImmoViz" target="_blank">GitHub ↗</a><a href="https://immoviz-cgxwo4whbtf8yrhfs7s3ql.streamlit.app/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item" data-modal="proj-melio">
-            <div class="proj-header"><span class="proj-tag" data-i18n="proj.melio.tag">AI / EdTech</span><h3 data-i18n="proj.melio.title">Mélio - AI Support</h3></div>
-            <p data-i18n="proj.melio.desc">AI features for student emotional support and school climate optimization.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>AI</span><span>NLP</span><span>SaaS</span></div>
-              <div class="proj-links"><a href="https://www.melio-soutien.fr/" target="_blank">Website ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item" data-modal="proj-verbatim">
-            <div class="proj-header"><span class="proj-tag" data-i18n="proj.verbatim.tag">🤖 NLP / LLM Pipeline</span><h3 data-i18n="proj.verbatim.title">Customer Verbatims Analyzer</h3></div>
-            <p data-i18n="proj.verbatim.desc">Asynchronous LLM pipeline (Gemma 4 via Ollama Cloud) for ingesting customer reviews, semantic theme harmonization, and qualitative synthesis. Features a real-time Streamlit dashboard.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Python</span><span>Streamlit</span><span>Ollama</span><span>Gemma 4</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/Customer_Verbatims_Analyzer_Quantifier" target="_blank">GitHub ↗</a><a href="https://customerverbatimsanalyzerquantifier-a9rrjkplmzgmxvj4bojxxk.streamlit.app/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 4. EXPERIENCE CARD -->
-    <section class="card card-exp" id="experience">
-      <p class="card-label" data-i18n="exp.label">// 💼 Experience</p>
-      <div class="timeline">
-        <div class="tl-item" data-modal="exp-melio">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">Feb 2026 - Present</span>
-            <h3><a href="https://www.melio-soutien.fr/" target="_blank" class="tl-company">AI Developer - Mélio ↗</a></h3>
-            <p data-i18n="exp.melio.desc">AI-driven student support & school climate</p>
-            <span class="tl-metric" data-i18n="exp.melio.metric">AI features · school well-being platform</span>
+      <!-- Hero Side : Post-It & Field Notes Widget -->
+      <div class="hero-side">
+        <!-- Yellow Sticky Note with Tape -->
+        <div class="postit-note">
+          <div class="tape-strip tape-top"></div>
+          <div class="postit-heading" data-i18n="hero.postit.title">Field Notes</div>
+          <div class="postit-text">
+            <ul>
+              <li data-i18n="hero.postit.item1">• 3M+ clients chez Nickel (BNP Paribas)</li>
+              <li data-i18n="hero.postit.item2">• 30+ pipelines dbt & modèles BigQuery</li>
+              <li data-i18n="hero.postit.item3">• 99.46% de rappel en vision médicale</li>
+              <li data-i18n="hero.postit.item4">• Double Master Fintech & Santé</li>
+            </ul>
           </div>
         </div>
-        <div class="tl-item" data-modal="exp-nickel">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">Sept 2025 - Present</span>
-            <h3><a href="https://nickel.eu/fr" target="_blank" class="tl-company">Data Analyst CX & Fraude - Nickel ↗</a></h3>
-            <p data-i18n="exp.nickel.desc">Customer Experience analytics</p>
-            <span class="tl-metric" data-i18n="exp.nickel.metric">3M+ customers · CX dashboards</span>
+
+        <!-- Field Notes Checklist Widget -->
+        <div class="field-notes-widget">
+          <div class="tape-strip tape-corner"></div>
+          <div class="field-notes-header">
+            <span class="title" data-i18n="hero.widget.title">[field_notes // 2026]</span>
+            <span class="tag-bracket">[01]</span>
           </div>
-        </div>
-        <div class="tl-item" data-modal="exp-singa">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">Apr - Aug 2025</span>
-            <h3><a href="https://wearesinga.org/" target="_blank" class="tl-company">Data Analyst S&E - SINGA ↗</a></h3>
-            <p data-i18n="exp.singa.desc">Monitoring & Evaluation</p>
-            <span class="tl-metric" data-i18n="exp.singa.metric">Impact measurement · refugee entrepreneurship</span>
-          </div>
-        </div>
-        <div class="tl-item" data-modal="exp-hub">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">2022 - 2024</span>
-            <h3><a href="https://epitech.africa/" target="_blank" class="tl-company">Hub Manager - Epitech Benin ↗</a></h3>
-            <p data-i18n="exp.hub.desc">Innovation hub management</p>
-            <span class="tl-metric" data-i18n="exp.hub.metric">200+ students · 3 innovation programs</span>
-          </div>
-        </div>
-        <div class="tl-item" data-modal="exp-aff">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">May - Sep 2022</span>
-            <h3><a href="https://africafintechforum.net/" target="_blank" class="tl-company">IT PM - Africa Fintech Forum ↗</a></h3>
-            <p data-i18n="exp.aff.desc">Platform architecture & team coordination</p>
-            <span class="tl-metric" data-i18n="exp.aff.metric">Platform for 50+ stakeholders</span>
-          </div>
-        </div>
-        <div class="tl-item" data-modal="exp-acumen">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">Jul - Nov 2020</span>
-            <h3><a href="https://agrosfer.co/" target="_blank" class="tl-company">Asst. PM - Agrosfer ↗</a></h3>
-            <p data-i18n="exp.agrosfer.desc">AgriTech sprint planning & data processing</p>
-            <span class="tl-metric" data-i18n="exp.agrosfer.metric">AgriTech · MVP delivery</span>
+          <div class="field-notes-list">
+            <div class="field-note-item">
+              <span class="check">[✓]</span>
+              <span data-i18n="hero.widget.c1">dbt, BigQuery & pipelines de production @ Nickel (BNP Paribas)</span>
+            </div>
+            <div class="field-note-item">
+              <span class="check">[✓]</span>
+              <span data-i18n="hero.widget.c2">Deep Learning en Santé & Vision Médicale @ ILIS Lille</span>
+            </div>
+            <div class="field-note-item">
+              <span class="check">[✓]</span>
+              <span data-i18n="hero.widget.c3">LLMs, RAG, Ollama & Architectures Multi-agents souveraines</span>
+            </div>
+            <div class="field-note-item">
+              <span class="check">[✓]</span>
+              <span data-i18n="hero.widget.c4">Décisionnel & Analytics métier (Power BI, Streamlit, Dash, SQL)</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. EDUCATION CARD - beside Experience (span 1 fills the gap) -->
-    <section class="card card-edu" id="journey">
-      <p class="card-label" data-i18n="edu.label">// 🎓 Education</p>
-      <div class="timeline">
-        <div class="tl-item" data-modal="edu-m2">
-          <span class="tl-dot"></span>
+    <!-- 2. PARTNERS & CONTEXT SECTION -->
+    <section class="partners-section">
+      <div class="section-meta">
+        <span class="tag-bracket">[context] [environments]</span>
+        <span class="tag-bracket">[02]</span>
+      </div>
+      <div class="section-title-wrap">
+        <h2 data-i18n="partners.title">Environnements & Contextes d'Intervention</h2>
+        <p data-i18n="partners.desc">Organisations où j'ai conçu des modèles, industrialisé des flux de données et mené des recherches appliquées :</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card">
           <div>
-            <span class="tl-date">2024 - 2026</span>
-            <h3>Master in Health Data Science</h3>
-            <p>Université de Lille - ILIS</p>
+            <div class="partner-name">Nickel (BNP Paribas)</div>
+            <div class="partner-domain">Fintech Régulée · CX & Fraude</div>
           </div>
         </div>
-        <div class="tl-item" data-modal="edu-epitech">
-          <span class="tl-dot"></span>
+        <div class="partner-card">
           <div>
-            <span class="tl-date">2022 - 2024</span>
-            <h3>Master in Digital Transformation</h3>
-            <p>Epitech</p>
+            <div class="partner-name">ILIS (Univ. Lille)</div>
+            <div class="partner-domain">Health Data Science & IA</div>
           </div>
         </div>
-        <div class="tl-item" data-modal="edu-bsc">
-          <span class="tl-dot"></span>
+        <div class="partner-card">
           <div>
-            <span class="tl-date">2019 - 2022</span>
-            <h3>Bachelor in IT Expertise</h3>
-            <p>Epitech - Software Engineering</p>
+            <div class="partner-name">Mélio</div>
+            <div class="partner-domain">EdTech & IA pour le Climat Scolaire</div>
+          </div>
+        </div>
+        <div class="partner-card">
+          <div>
+            <div class="partner-name">SINGA</div>
+            <div class="partner-domain">Mesure d'Impact Social & Data</div>
+          </div>
+        </div>
+        <div class="partner-card">
+          <div>
+            <div class="partner-name">Epitech</div>
+            <div class="partner-domain">Génie Logiciel & Innovation</div>
+          </div>
+        </div>
+        <div class="partner-card">
+          <div>
+            <div class="partner-name">Africa Fintech Forum</div>
+            <div class="partner-domain">Architecture Plateforme & Audit</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. TECH STACK CARD - full width row -->
-    <section class="card card-stack" id="stack">
-      <p class="card-label" data-i18n="stack.label">// Tech Stack</p>
-      <h2 data-i18n="stack.h2">Tools I Use</h2>
-      <div class="stack-grid">
-        <a class="stack-chip" href="https://docs.python.org/3/" target="_blank"><img src="./assets/images/pythonlogo.png" alt="Python"/><span>Python</span></a>
-        <a class="stack-chip" href="https://www.r-project.org/other-docs.html" target="_blank"><img src="./assets/images/Rlogo.png" alt="R"/><span>R</span></a>
-        <a class="stack-chip" href="https://www.postgresql.org/docs/" target="_blank"><img src="./assets/images/sqllogo.png" alt="SQL"/><span>SQL</span></a>
-        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"><img src="./assets/images/jslogo.png" alt="JS"/><span>JavaScript</span></a>
-        <a class="stack-chip" href="https://docs.docker.com/" target="_blank"><img src="./assets/images/docker.svg" alt="Docker"/><span>Docker</span></a>
-        <a class="stack-chip" href="https://docs.aws.amazon.com/" target="_blank"><img src="./assets/images/aws.webp" alt="AWS"/><span>AWS</span></a>
-        <a class="stack-chip" href="https://git-scm.com/doc" target="_blank"><img src="./assets/images/gitlogo.png" alt="Git"/><span>Git</span></a>
-        <a class="stack-chip" href="https://docs.github.com/" target="_blank"><img src="./assets/images/github.svg" alt="GitHub"/><span>GitHub</span></a>
-        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/HTML" target="_blank"><img src="./assets/images/htmllogo.png" alt="HTML"/><span>HTML</span></a>
-        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/CSS" target="_blank"><img src="./assets/images/csslogo.png" alt="CSS"/><span>CSS</span></a>
-        <a class="stack-chip" href="https://learn.microsoft.com/en-us/power-bi/" target="_blank"><img src="./assets/images/powerbi.svg" alt="Power BI"/><span>Power BI</span></a>
-        <a class="stack-chip" href="https://cloud.google.com/docs" target="_blank"><img src="./assets/images/gcp.svg" alt="GCP"/><span>GCP</span></a>
-        <a class="stack-chip" href="https://docs.getdbt.com/" target="_blank"><img src="./assets/images/dbt.svg" alt="dbt"/><span>dbt</span></a>
-        <a class="stack-chip" href="https://docs.anthropic.com/en/docs/claude-code" target="_blank"><img src="./assets/images/claude.svg" alt="Claude Code"/><span>Claude Code</span></a>
-        <a class="stack-chip" href="https://cloud.google.com/gemini/docs/codeassist/overview" target="_blank"><img src="./assets/images/gemini.svg" alt="Gemini Code Assist"/><span>Gemini Code Assist</span></a>
+    <!-- 3. SELECTED WORKS (PAPERLINE BLUEPRINTS) -->
+    <section class="works-section" id="works">
+      <div class="section-meta">
+        <span class="tag-bracket">[selected] [works]</span>
+        <span class="tag-bracket">[archive 2024 - 2026]</span>
+      </div>
+      <div class="section-title-wrap">
+        <h2 data-i18n="proj.h2">Projets & Blueprints d'Ingénierie</h2>
+        <p data-i18n="proj.subtitle">Études de cas concrètes articulant problématique métier, rigueur méthodologique et impact mesurable.</p>
+      </div>
+
+      <div class="works-grid">
+
+        <!-- Case 01 : Finder Bot -->
+        <article class="work-blueprint-card" data-modal="proj-finder">
+          <div class="blueprint-bar">
+            <span class="case-index">[case_01] // finder_bot</span>
+            <span class="case-domain" data-i18n="proj.finder.tag">🏆 Mémoire de Master · IA Souveraine</span>
+          </div>
+          <div class="blueprint-visual-area">
+            <div class="blueprint-preview-inner">
+              <div class="tape-strip tape-left"></div>
+              <h4 data-i18n="proj.finder.title">Finder Bot - Geolocation AI Assistant</h4>
+              <p data-i18n="proj.finder.desc">Assistant de géolocalisation hybride LLM-RAG pour la recherche de personnes disparues. Raisonnement spatial par graphe, modélisation bayésienne SAR et souveraineté RGPD.</p>
+              <div class="blueprint-metrics-strip">
+                <span class="metric-pill">12M+ POIs</span>
+                <span class="metric-pill">Zero Data Leak</span>
+                <span class="metric-pill">Local LLM (Ollama)</span>
+              </div>
+            </div>
+          </div>
+          <div class="blueprint-body">
+            <div class="blueprint-info">
+              <h3>finder_bot</h3>
+              <p data-i18n="proj.finder.longdesc">Conception d'une solution d'IA souveraine pour la localisation en temps réel sans transfert de données sensibles. Orchestration d'un modèle local avec moteur de recherche spatial bayésien inspiré des protocoles de sauvetage (SAR).</p>
+              <div class="blueprint-actions">
+                <button class="btn-view-case" data-i18n="proj.btn.view">view case [↗]</button>
+                <a href="https://github.com/Abd2k27/Finder_bot" target="_blank" class="btn-link-out" onclick="event.stopPropagation()">github [↗]</a>
+                <a href="https://abd2k27.github.io/Finder_bot/" target="_blank" class="btn-link-out" onclick="event.stopPropagation()">live demo [↗]</a>
+              </div>
+            </div>
+            <div class="blueprint-specs">
+              <div class="specs-block">
+                <span class="label">// stack & methods</span>
+                <div class="specs-tags">
+                  <span>Python</span><span>LLM / Ollama</span><span>RAG</span><span>Bayesian Engine</span><span>SQLite</span><span>GDPR</span>
+                </div>
+              </div>
+              <div class="specs-block">
+                <span class="label">// primary deliverable</span>
+                <div class="specs-tags">
+                  <span>Production Agent</span><span>API REST</span><span>Interactive Map</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 02 : Fetal Ultrasound Classification -->
+        <article class="work-blueprint-card" data-modal="proj-fetal">
+          <div class="blueprint-bar">
+            <span class="case-index">[case_02] // fetal_ultrasound_cv</span>
+            <span class="case-domain" data-i18n="proj.fetal.tag">🏥 Vision par Ordinateur Médicale</span>
+          </div>
+          <div class="blueprint-visual-area">
+            <div class="blueprint-preview-inner">
+              <div class="tape-strip tape-top"></div>
+              <h4 data-i18n="proj.fetal.title">Classification d'Échographies Fœtales</h4>
+              <p data-i18n="proj.fetal.desc">Modèle EfficientNet-B0 pour l'identification automatisée des plans anatomiques fœtaux. 92% de précision, F1-macro 0.91 et explicabilité clinique Grad-CAM.</p>
+              <div class="blueprint-metrics-strip">
+                <span class="metric-pill">5 271 Images</span>
+                <span class="metric-pill">92% Accuracy</span>
+                <span class="metric-pill">Grad-CAM Heatmaps</span>
+              </div>
+            </div>
+          </div>
+          <div class="blueprint-body">
+            <div class="blueprint-info">
+              <h3>fetal_ultrasound</h3>
+              <p data-i18n="proj.fetal.longdesc">Pipeline d'entraînement et d'évaluation sous PyTorch sur 5 271 clichés échographiques. Augmentations anatomiquement cohérentes et cartes d'activation Grad-CAM pour garantir la transparence clinique.</p>
+              <div class="blueprint-actions">
+                <button class="btn-view-case" data-i18n="proj.btn.view">view case [↗]</button>
+                <a href="https://github.com/Abd2k27/fetal-ultrasound-classification" target="_blank" class="btn-link-out" onclick="event.stopPropagation()">github [↗]</a>
+              </div>
+            </div>
+            <div class="blueprint-specs">
+              <div class="specs-block">
+                <span class="label">// stack & methods</span>
+                <div class="specs-tags">
+                  <span>PyTorch</span><span>EfficientNet-B0</span><span>Grad-CAM</span><span>Computer Vision</span><span>Scikit-learn</span>
+                </div>
+              </div>
+              <div class="specs-block">
+                <span class="label">// primary deliverable</span>
+                <div class="specs-tags">
+                  <span>ML Model Pipeline</span><span>Clinical Explainability</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 03 : Customer Verbatims Analyzer -->
+        <article class="work-blueprint-card" data-modal="proj-verbatim">
+          <div class="blueprint-bar">
+            <span class="case-index">[case_03] // customer_verbatims_llm</span>
+            <span class="case-domain" data-i18n="proj.verbatim.tag">🤖 Pipeline TALN / LLM Asynchrone</span>
+          </div>
+          <div class="blueprint-visual-area">
+            <div class="blueprint-preview-inner">
+              <div class="tape-strip tape-corner"></div>
+              <h4 data-i18n="proj.verbatim.title">Analyseur & Quantificateur de Verbatims</h4>
+              <p data-i18n="proj.verbatim.desc">Pipeline LLM asynchrone (Gemma 4 via Ollama Cloud) pour l'ingestion de commentaires, l'harmonisation sémantique et la synthèse qualitative sous Streamlit.</p>
+              <div class="blueprint-metrics-strip">
+                <span class="metric-pill">Gemma 4 Remote</span>
+                <span class="metric-pill">Pydantic Validation</span>
+                <span class="metric-pill">Streamlit Dashboard</span>
+              </div>
+            </div>
+          </div>
+          <div class="blueprint-body">
+            <div class="blueprint-info">
+              <h3>verbatim_analyzer</h3>
+              <p data-i18n="proj.verbatim.longdesc">Système complet d'extraction d'insights qualitatifs et quantitatifs à partir de retours clients bruts. Orchestration avec checkpoints de reprise, validation Pydantic et dashboard décisionnel temps réel.</p>
+              <div class="blueprint-actions">
+                <button class="btn-view-case" data-i18n="proj.btn.view">view case [↗]</button>
+                <a href="https://github.com/Abd2k27/Customer_Verbatims_Analyzer_Quantifier" target="_blank" class="btn-link-out" onclick="event.stopPropagation()">github [↗]</a>
+                <a href="https://customerverbatimsanalyzerquantifier-a9rrjkplmzgmxvj4bojxxk.streamlit.app/" target="_blank" class="btn-link-out" onclick="event.stopPropagation()">live demo [↗]</a>
+              </div>
+            </div>
+            <div class="blueprint-specs">
+              <div class="specs-block">
+                <span class="label">// stack & methods</span>
+                <div class="specs-tags">
+                  <span>Python</span><span>Streamlit</span><span>Ollama Cloud</span><span>Gemma 4</span><span>Pydantic</span><span>Plotly</span>
+                </div>
+              </div>
+              <div class="specs-block">
+                <span class="label">// primary deliverable</span>
+                <div class="specs-tags">
+                  <span>Async Pipeline</span><span>Decision Dashboard</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Secondary Projects Grid -->
+      <div class="secondary-works-grid">
+        <div class="small-work-card" data-modal="proj-asthme">
+          <div class="tag-bracket">[case_04] // health_viz_cloud</div>
+          <h4 data-i18n="proj.asthme.title">Dashboard Asthme & Pollens (Santé Publique)</h4>
+          <p data-i18n="proj.asthme.desc">Tableau de bord décisionnel sur les passages aux urgences pour asthme, pollens et polluants en France. Déployé sur AWS via conteneurisation Docker.</p>
+          <div class="specs-tags">
+            <span>Dash Plotly</span><span>Docker</span><span>AWS</span><span>Selenium</span>
+          </div>
+        </div>
+
+        <div class="small-work-card" data-modal="proj-lexi">
+          <div class="tag-bracket">[case_05] // legal_rag_hybrid</div>
+          <h4 data-i18n="proj.lexi.title">LexiBot - Chatbot RAG Juridique</h4>
+          <p data-i18n="proj.lexi.desc">Chatbot RAG hybride (sémantique + BM25) sur 200+ pages de textes juridiques. Décomposition multi-requêtes et vector store ChromaDB.</p>
+          <div class="specs-tags">
+            <span>ChromaDB</span><span>BM25</span><span>Streamlit</span><span>Sentence Transformers</span>
+          </div>
+        </div>
+
+        <div class="small-work-card" data-modal="proj-melio">
+          <div class="tag-bracket">[case_06] // edtech_school_climate</div>
+          <h4 data-i18n="proj.melio.title">Mélio - Climat Scolaire & IA</h4>
+          <p data-i18n="proj.melio.desc">Détection précoce des signaux de détresse scolaire par règles métier et recherche sémantique RAG pour l'amélioration du climat éducatif.</p>
+          <div class="specs-tags">
+            <span>IA / NLP</span><span>RAG</span><span>Business Rules</span><span>SaaS</span>
+          </div>
+        </div>
+
+        <div class="small-work-card" data-modal="proj-immo">
+          <div class="tag-bracket">[case_07] // geospatial_analytics</div>
+          <h4 data-i18n="proj.immo.title">ImmoViz - Analytics Immobilier</h4>
+          <p data-i18n="proj.immo.desc">Dashboard géospatial interactif pour l'exploration et l'analyse décisionnelle des transactions immobilières françaises.</p>
+          <div class="specs-tags">
+            <span>Streamlit</span><span>Leaflet</span><span>Pandas</span><span>Python</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 4. FIELD EXPERIENCE & LOGBOOK -->
+    <section class="experience-section" id="experience">
+      <div class="experience-log">
+        <div class="section-meta">
+          <span class="tag-bracket">[field_log] [career_trajectory]</span>
+          <span class="tag-bracket">[03]</span>
+        </div>
+        <div class="section-title-wrap">
+          <h2 data-i18n="exp.h2">Journal d'Expériences & Missions</h2>
+          <p data-i18n="exp.subtitle">Trajectoire professionnelle en Fintech, IA en santé, gestion de programmes d'innovation et ingénierie.</p>
+        </div>
+
+        <div class="log-entry" data-modal="exp-nickel">
+          <div class="log-entry-meta">
+            <span class="period">Sept 2025 - Présent</span>
+            <span class="company">Nickel (BNP Paribas) ↗</span>
+          </div>
+          <h4 data-i18n="exp.nickel.role">Data Analyst CX & Fraude</h4>
+          <p data-i18n="exp.nickel.desc">Aide à la décision, modélisation anti-fraude & pipelines BigQuery</p>
+          <span class="metric-badge" data-i18n="exp.nickel.metric">30+ modèles dbt · 3 modèles ML fraude · 3M+ clients</span>
+        </div>
+
+        <div class="log-entry" data-modal="exp-melio">
+          <div class="log-entry-meta">
+            <span class="period">Oct 2025 - Présent</span>
+            <span class="company">Mélio ↗</span>
+          </div>
+          <h4 data-i18n="exp.melio.role">Développeur IA</h4>
+          <p data-i18n="exp.melio.desc">Modélisation IA & analyse émotionnelle pour le climat scolaire</p>
+          <span class="metric-badge" data-i18n="exp.melio.metric">RAG · Détection de signaux · Plateforme SaaS</span>
+        </div>
+
+        <div class="log-entry" data-modal="exp-singa">
+          <div class="log-entry-meta">
+            <span class="period">Avr - Août 2025</span>
+            <span class="company">SINGA ↗</span>
+          </div>
+          <h4 data-i18n="exp.singa.role">Data Analyst Suivi & Évaluation</h4>
+          <p data-i18n="exp.singa.desc">Mesure d'impact social & harmonisation data internationale</p>
+          <span class="metric-badge" data-i18n="exp.singa.metric">5+ pays · CRM Salesforce · Reporting stratégique</span>
+        </div>
+
+        <div class="log-entry" data-modal="exp-hub">
+          <div class="log-entry-meta">
+            <span class="period">2022 - 2024</span>
+            <span class="company">Epitech Bénin ↗</span>
+          </div>
+          <h4 data-i18n="exp.hub.role">Hub Manager</h4>
+          <p data-i18n="exp.hub.desc">Pilotage du pôle innovation, hackathons & coaching de 200+ étudiants</p>
+          <span class="metric-badge" data-i18n="exp.hub.metric">200+ étudiants coachés · 5+ projets open innovation</span>
+        </div>
+
+        <div class="log-entry" data-modal="exp-aff">
+          <div class="log-entry-meta">
+            <span class="period">Mai - Sept 2022</span>
+            <span class="company">Africa Fintech Forum ↗</span>
+          </div>
+          <h4 data-i18n="exp.aff.role">Chef de Projet IT</h4>
+          <p data-i18n="exp.aff.desc">Architecture plateforme digitale, audit technologique & pilotage de KPIs</p>
+          <span class="metric-badge" data-i18n="exp.aff.metric">50+ parties prenantes · Spécifications UX & KPI</span>
+        </div>
+
+        <div class="log-entry" data-modal="exp-acumen">
+          <div class="log-entry-meta">
+            <span class="period">Juil - Nov 2020</span>
+            <span class="company">Agrosfer ↗</span>
+          </div>
+          <h4 data-i18n="exp.acumen.role">Assistant Chef de Projet</h4>
+          <p data-i18n="exp.agrosfer.desc">Gestion de sprints AgriTech & traitement de données</p>
+          <span class="metric-badge" data-i18n="exp.agrosfer.metric">Livraison MVP · Coordination Agile</span>
+        </div>
+
+      </div>
+
+      <!-- Right Side : Polaroid Photo Card with Tape -->
+      <div>
+        <div class="polaroid-card">
+          <div class="tape-strip tape-top"></div>
+          <img class="polaroid-img" src="assets/my-avatar.png" alt="Abdou Wahab Dossou"/>
+          <div class="polaroid-caption" data-i18n="exp.polaroid">Abdou • Nantes & Lille, 2026</div>
+        </div>
       </div>
     </section>
 
-    <!-- 7. CONTACT / BOOKING CARD -->
-    <section class="card card-contact" id="contact">
-      <div class="contact-left">
-        <p class="card-label" data-i18n="contact.label">// Contact</p>
-        <h2><span data-i18n="contact.h2a">Let's Work</span><br/><span class="accent" data-i18n="contact.h2b">Together</span></h2>
-        <p class="card-text" data-i18n="contact.desc">Open to data science roles, research collaborations, and consulting missions in health tech or fintech.</p>
-        <div class="social-row">
-          <a href="https://www.linkedin.com/in/wahabdossou/" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a href="https://github.com/Abd2k27" target="_blank" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
-          <a href="mailto:dossouabdou@gmail.com" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg></a>
+    <!-- 5. ACADEMIC FORMATION -->
+    <section class="education-section" id="education">
+      <div class="section-meta">
+        <span class="tag-bracket">[education] [degrees]</span>
+        <span class="tag-bracket">[04]</span>
+      </div>
+      <div class="section-title-wrap">
+        <h2 data-i18n="edu.h2">Diplômes & Cursus Universitaire</h2>
+        <p data-i18n="edu.subtitle">Fondations scientifiques, ingénierie logicielle et spécialisation en Data Science de Santé.</p>
+      </div>
+
+      <div class="degrees-grid">
+        <div class="degree-card" data-modal="edu-m2">
+          <span class="deg-year">2024 - 2026</span>
+          <h4 data-i18n="edu.m2.title">Master Data Science en Santé</h4>
+          <p>Université de Lille - Faculté ILIS</p>
+          <span class="tag-bracket">[Machine Learning, Biostatistiques, Vision & NLP Clinique]</span>
+        </div>
+
+        <div class="degree-card" data-modal="edu-epitech">
+          <span class="deg-year">2022 - 2024</span>
+          <h4 data-i18n="edu.m1.title">Master Transformation Numérique</h4>
+          <p>Epitech</p>
+          <span class="tag-bracket">[Cloud DevOps, Architecture logicielle, Management IT]</span>
+        </div>
+
+        <div class="degree-card" data-modal="edu-bsc">
+          <span class="deg-year">2019 - 2022</span>
+          <h4 data-i18n="edu.bsc.title">Bachelor Expertise Informatique</h4>
+          <p>Epitech</p>
+          <span class="tag-bracket">[Génie Logiciel, Algorithmique, C/C++, Web & Bases de Données]</span>
         </div>
       </div>
+    </section>
+
+    <!-- 6. TOOLKIT & STACK (ENGINEERING COMPONENT SPEC) -->
+    <section class="toolkit-section" id="toolkit">
+      <div class="section-meta">
+        <span class="tag-bracket">[toolkit] [technologies]</span>
+        <span class="tag-bracket">[05]</span>
+      </div>
+      <div class="section-title-wrap">
+        <h2 data-i18n="stack.h2">Boîte à Outils Technique</h2>
+        <p data-i18n="stack.subtitle">Technologies, frameworks et standards d'ingénierie mobilisés au quotidien.</p>
+      </div>
+
+      <div class="toolkit-grid">
+        <!-- Col 1 -->
+        <div class="toolkit-col">
+          <div class="toolkit-col-title" data-i18n="stack.p1">[01] data_engineering</div>
+          <div class="toolkit-items">
+            <a class="tool-chip" href="https://docs.python.org/3/" target="_blank"><img src="./assets/images/pythonlogo.png" alt="Python"/><span>Python</span></a>
+            <a class="tool-chip" href="https://www.postgresql.org/" target="_blank"><img src="./assets/images/sqllogo.png" alt="SQL"/><span>SQL</span></a>
+            <a class="tool-chip" href="https://docs.getdbt.com/" target="_blank"><img src="./assets/images/dbt.svg" alt="dbt"/><span>dbt</span></a>
+            <a class="tool-chip" href="https://cloud.google.com/bigquery" target="_blank"><img src="./assets/images/gcp.svg" alt="GCP"/><span>BigQuery (GCP)</span></a>
+            <a class="tool-chip" href="https://aws.amazon.com/" target="_blank"><img src="./assets/images/aws.webp" alt="AWS"/><span>AWS</span></a>
+            <a class="tool-chip" href="https://www.docker.com/" target="_blank"><img src="./assets/images/docker.svg" alt="Docker"/><span>Docker</span></a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="toolkit-col">
+          <div class="toolkit-col-title" data-i18n="stack.p2">[02] ml_and_ai</div>
+          <div class="toolkit-items">
+            <a class="tool-chip" href="https://pytorch.org/" target="_blank"><img src="./assets/images/pythonlogo.png" alt="PyTorch"/><span>PyTorch</span></a>
+            <a class="tool-chip" href="https://scikit-learn.org/" target="_blank"><img src="./assets/images/pythonlogo.png" alt="Scikit-Learn"/><span>Scikit-Learn</span></a>
+            <a class="tool-chip" href="https://ollama.com/" target="_blank"><img src="./assets/images/gemini.svg" alt="LLMs & RAG"/><span>LLMs & RAG</span></a>
+            <a class="tool-chip" href="https://www.r-project.org/" target="_blank"><img src="./assets/images/Rlogo.png" alt="R"/><span>R (Biostatistiques)</span></a>
+          </div>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="toolkit-col">
+          <div class="toolkit-col-title" data-i18n="stack.p3">[03] bi_and_viz</div>
+          <div class="toolkit-items">
+            <a class="tool-chip" href="https://powerbi.microsoft.com/" target="_blank"><img src="./assets/images/powerbi.svg" alt="Power BI"/><span>Power BI</span></a>
+            <a class="tool-chip" href="https://streamlit.io/" target="_blank"><img src="./assets/images/pythonlogo.png" alt="Streamlit"/><span>Streamlit</span></a>
+            <a class="tool-chip" href="https://plotly.com/dash/" target="_blank"><img src="./assets/images/pythonlogo.png" alt="Dash"/><span>Dash Plotly</span></a>
+            <a class="tool-chip" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"><img src="./assets/images/jslogo.png" alt="JS"/><span>JavaScript</span></a>
+          </div>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="toolkit-col">
+          <div class="toolkit-col-title" data-i18n="stack.p4">[04] methods_and_agents</div>
+          <div class="toolkit-items">
+            <a class="tool-chip" href="https://git-scm.com/" target="_blank"><img src="./assets/images/gitlogo.png" alt="Git"/><span>Git</span></a>
+            <a class="tool-chip" href="https://github.com/" target="_blank"><img src="./assets/images/github.svg" alt="GitHub"/><span>GitHub</span></a>
+            <a class="tool-chip" href="https://docs.anthropic.com/en/docs/claude-code" target="_blank"><img src="./assets/images/claude.svg" alt="Claude Code"/><span>Claude Code / Agents</span></a>
+            <a class="tool-chip" href="https://cloud.google.com/gemini" target="_blank"><img src="./assets/images/gemini.svg" alt="Gemini"/><span>Gemini AI</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="contact-info">
+        <div class="section-meta" style="margin-bottom:0.5rem; padding-bottom:0.4rem;">
+          <span class="tag-bracket">[initiate_collaboration]</span>
+          <span class="tag-bracket">[06]</span>
+        </div>
+        <h3 data-i18n="contact.h2">Échangeons sur vos Enjeux Data & IA</h3>
+        <p data-i18n="contact.desc">Ouvert aux opportunités en cabinet de conseil Data/IA, postes de Data Scientist / ML Engineer, et missions d'accompagnement data en Fintech et Santé.</p>
+        <div class="contact-links">
+          <a class="contact-link-item" href="mailto:dossouabdou@gmail.com">
+            <span>[email] :</span> <strong>dossouabdou@gmail.com</strong>
+          </a>
+          <a class="contact-link-item" href="https://www.linkedin.com/in/wahabdossou/" target="_blank">
+            <span>[linkedin] :</span> <strong>linkedin.com/in/wahabdossou ↗</strong>
+          </a>
+          <a class="contact-link-item" href="https://github.com/Abd2k27" target="_blank">
+            <span>[github] :</span> <strong>github.com/Abd2k27 ↗</strong>
+          </a>
+        </div>
+      </div>
+
       <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-        <input type="text" name="name" data-i18n-placeholder="contact.name" placeholder="Your Name" required/>
-        <input type="email" name="email" data-i18n-placeholder="contact.email" placeholder="Your Email" required/>
-        <textarea name="message" data-i18n-placeholder="contact.message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="btn-ink" data-i18n="contact.btn">Send Message →</button>
+        <input type="text" name="name" data-i18n-placeholder="contact.name" placeholder="Votre nom complet" required/>
+        <input type="email" name="email" data-i18n-placeholder="contact.email" placeholder="Votre adresse email professionnelle" required/>
+        <textarea name="message" data-i18n-placeholder="contact.message" placeholder="Votre message, contexte de mission ou opportunité..." rows="4" required></textarea>
+        <button type="submit" class="btn-paperline" data-i18n="contact.btn">Envoyer le message [→]</button>
       </form>
     </section>
+
+    <!-- 8. FOOTER (PAPERLINE EXACT) -->
+    <footer class="paperline-footer">
+      <div class="footer-top">
+        <div class="footer-byline">
+          <span class="tag-bracket">[footer] [starts here]</span>
+          <span style="margin-left: 0.6rem;">if you're still_here — thank you for exploring.</span>
+        </div>
+        <div class="footer-back-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          back to top [↑]
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>[version 2.0] // [2026]</div>
+        <div>&copy; <span id="datee"></span> Abdou Wahab Dossou • Consultant Junior Data & IA</div>
+        <div>[i][v]</div>
+      </div>
+    </footer>
 
   </main>
 
   <!-- ===== MODAL OVERLAY ===== -->
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal">
-      <button class="modal-close" id="modal-close">✕</button>
+      <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
       <span class="modal-tag" id="modal-tag"></span>
       <h3 id="modal-title"></h3>
       <span class="modal-date" id="modal-date"></span>
@@ -311,7 +590,6 @@
     </div>
   </div>
 
-  <footer class="footer"><p>&copy; <span id="datee"></span> Abdou Wahab Dossou</p></footer>
   <script src="js/script.js"></script>
 </body>
 </html>
