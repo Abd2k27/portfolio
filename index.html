@@ -3,315 +3,355 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abdou - Data Scientist</title>
-  <meta name="description" content="Portfolio of Abdou Wahab Dossou - Data Scientist. Dual expertise in Fintech data engineering (Nickel / BNP Paribas) and AI applied to healthcare."/>
+  <title>Abdou Wahab Dossou · Consultant Data & IA</title>
+  <meta name="description" content="Abdou Wahab Dossou, Consultant Data & IA. Fintech régulée (Nickel / BNP Paribas) et IA appliquée à la santé (Master Data Science en Santé, Université de Lille)."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Abdou Wahab Dossou · Consultant Data & IA"/>
+  <meta property="og:description" content="Pipelines data, modèles prédictifs et outils IA en Fintech et en santé."/>
+  <meta property="og:url" content="https://abd2k27.github.io/portfolio/"/>
+  <meta property="og:image" content="https://abd2k27.github.io/portfolio/assets/my-avatar.png"/>
   <link rel="icon" type="image/x-icon" href="assets/favicon/Abdou-Logo.ico"/>
+  <script>
+    // Applique thème et langue avant le rendu pour éviter tout clignotement
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+      var l = localStorage.getItem("lang");
+      if (l === "en") document.documentElement.lang = "en";
+    } catch (e) {}
+  </script>
   <link rel="stylesheet" href="css/style.css"/>
-
-  <!-- SVG Filter for hand-drawn effect -->
-  <svg style="position:absolute;width:0;height:0;">
-    <filter id="sketchy">
-      <feTurbulence type="turbulence" baseFrequency="0.012" numOctaves="3" result="noise" seed="2"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <filter id="sketchy-strong">
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="4" result="noise" seed="5"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-  </svg>
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-logo"><img src="./assets/favicon/Abdou-Logo.ico" alt="Abdou Logo"/></a>
+      <a href="#top" class="nav-logo">
+        <img src="./assets/favicon/Abdou-Logo.ico" alt=""/>
+        <span>Abdou Dossou</span>
+      </a>
       <ul class="nav-menu">
-        <li><a class="nav-link" href="#hero" data-i18n="nav.home">Home</a></li>
-        <li><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
-        <li><a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a></li>
-        <li><a class="nav-link" href="#experience" data-i18n="nav.exp">Experience</a></li>
-        <li><a class="nav-link" href="#stack" data-i18n="nav.stack">Stack</a></li>
-        <li><a class="nav-link" href="#journey" data-i18n="nav.edu">Education</a></li>
+        <li><a class="nav-link" href="#projects" data-i18n="nav.projects">Projets</a></li>
+        <li><a class="nav-link" href="#experience" data-i18n="nav.exp">Expériences</a></li>
+        <li><a class="nav-link" href="#education" data-i18n="nav.edu">Formation</a></li>
+        <li><a class="nav-link" href="#skills" data-i18n="nav.skills">Compétences</a></li>
         <li><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
-        <li><a class="nav-link btn-resume" href="./assets/Abdou_cv_fr.pdf" download data-i18n="nav.resume">CV ↓</a></li>
-        <button id="lang-btn" class="lang-btn" onclick="toggleLang()">FR</button>
-        <div class="theme-switch">
-          <input type="checkbox" id="switch"/>
-          <label class="toggle-icons" for="switch">
-            <img class="sun" src="assets/sun.svg" alt="Light"/>
-            <img class="moon" src="assets/moon.svg" alt="Dark"/>
-          </label>
-        </div>
       </ul>
-      <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+      <div class="nav-actions">
+        <button id="lang-btn" class="icon-btn" type="button" onclick="toggleLang()" aria-label="Switch language">EN</button>
+        <button id="theme-btn" class="icon-btn" type="button" onclick="toggleTheme()" aria-label="Thème clair / sombre">
+          <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm nav-cv" href="./assets/Abdou_DOSSOU_CV.pdf" target="_blank" rel="noopener" data-i18n="nav.resume">CV</a>
+        <button class="hamburger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </nav>
 
-  <!-- ===== BENTO GALLERY ===== -->
-  <main class="gallery">
+  <main id="top">
 
-    <!-- 1. HERO CARD -->
-    <section class="card card-hero" id="hero">
-      <div class="manga-lines top-right"></div>
-      <img class="hero-avatar" src="assets/my-avatar.png" alt="Abdou Wahab Dossou"/>
+    <!-- ===== HERO ===== -->
+    <header class="hero container">
       <div class="hero-text">
-        <p class="card-label" data-i18n="hero.label">// Data Scientist</p>
-        <h1>Hi, I'm <span class="accent">Abdou</span></h1>
-        <p class="hero-subtitle">Consultant DATA / IA</p>
-        <p class="hero-typing" id="typed-text"></p>
-        <p class="hero-desc" data-i18n="hero.desc">Data Scientist with dual expertise: data engineering and fraud detection in regulated Fintech (Nickel / BNP Paribas), and AI modeling in healthcare (fetal diagnostics, missing persons search). I build robust ML systems under real-world constraints.</p>
+        <p class="eyebrow" data-i18n="hero.location">Paris · mobilité nationale</p>
+        <h1>Abdou Wahab Dossou</h1>
+        <p class="hero-role">Consultant Data & IA</p>
+        <p class="hero-desc" data-i18n="hero.desc">Je transforme des données brutes en décisions et en outils concrets : pipelines fiables, modèles prédictifs, IA appliquée. Expérience en Fintech régulée (Nickel / BNP Paribas) et en IA appliquée à la santé.</p>
         <div class="hero-cta">
-          <a href="#projects" class="btn-ink" data-i18n="hero.cta1">View Projects →</a>
-          <a href="#contact" class="btn-outline" data-i18n="hero.cta2">Get In Touch</a>
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">Voir les projets</a>
+          <a href="./assets/Abdou_DOSSOU_CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="hero.cta2">Télécharger le CV</a>
+          <a href="https://www.linkedin.com/in/wahabdossou/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="https://github.com/Abd2k27" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.1.83-.26.83-.58v-2.23c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+        </div>
+      </div>
+      <img class="hero-avatar" src="assets/my-avatar.png" alt="Abdou Wahab Dossou"/>
+    </header>
+
+    <!-- Chiffres clés -->
+    <section class="container">
+      <ul class="kpis">
+        <li><strong>3M+</strong><span data-i18n="kpi.1">clients Nickel couverts par mes analyses</span></li>
+        <li><strong>30+</strong><span data-i18n="kpi.2">modèles dbt déployés en production</span></li>
+        <li><strong>3</strong><span data-i18n="kpi.3">modèles ML anti-fraude entraînés</span></li>
+        <li><strong>92 %</strong><span data-i18n="kpi.4">de précision en vision médicale</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section class="section container" id="about">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="about.label">À propos</p>
+        <h2 data-i18n="about.h2">Du terrain à la décision</h2>
+      </div>
+      <div class="about-grid">
+        <p class="lead" data-i18n="about.p1">Mon parcours croise deux mondes : la Fintech régulée, où j'ai construit des pipelines de données en production, des modèles de détection de fraude et des dashboards utilisés au quotidien par les équipes métier, et l'IA appliquée à des cas d'usage à fort enjeu (santé, impact social).</p>
+        <p class="lead" data-i18n="about.p2">La technique n'a de valeur que si elle répond à un vrai besoin. J'aime comprendre un problème avant de choisir l'outil, qu'il s'agisse d'un modèle de ML, d'un dashboard ou d'un prototype, et expliquer mes choix aussi bien à des experts qu'à des équipes non techniques.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROJETS ===== -->
+    <section class="section container" id="projects">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="proj.label">Projets</p>
+        <h2 data-i18n="proj.h2">Projets sélectionnés</h2>
+        <p class="section-sub" data-i18n="proj.sub">Cliquez sur un projet pour voir le contexte, l'approche et les résultats.</p>
+      </div>
+
+      <!-- Data Science & IA -->
+      <div class="proj-group">
+        <h3 class="group-title"><span class="group-dot ds"></span><span data-i18n="proj.group.ds">Data Science & IA</span></h3>
+        <div class="proj-grid">
+          <article class="proj-card" data-modal="proj-finder" tabindex="0">
+            <div class="proj-content">
+              <span class="proj-domain" data-i18n="proj.finder.tag">Mémoire de Master · CHU de Lille</span>
+              <h4 data-i18n="proj.finder.title">Finder Bot : géolocalisation d'urgence par IA</h4>
+              <p data-i18n="proj.finder.desc">Localiser en temps réel des victimes à partir des descriptions textuelles transmises au SAMU. LLM local couplé à un moteur bayésien sur 12M+ points d'intérêt, sans aucune donnée envoyée dans le cloud.</p>
+              <p class="proj-for"><span data-i18n="proj.for">Pour qui :</span> <span data-i18n="proj.finder.for">Régulateurs du SAMU qui doivent localiser une victime en quelques minutes.</span></p>
+              <div class="tags"><span>Python</span><span>LLM</span><span>RAG</span><span>Ollama</span><span>Bayésien</span></div>
+              <div class="proj-links">
+                <a href="https://github.com/Abd2k27/Finder_bot" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://abd2k27.github.io/Finder_bot/" target="_blank" rel="noopener" data-i18n="proj.live">Démo ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="proj-card" data-modal="proj-verbatim" tabindex="0">
+            <div class="proj-content">
+              <span class="proj-domain" data-i18n="proj.verbatim.tag">NLP · LLM</span>
+              <h4 data-i18n="proj.verbatim.title">Analyseur de verbatims clients</h4>
+              <p data-i18n="proj.verbatim.desc">Pipeline LLM asynchrone (Gemma 4) qui classe des avis clients par thème, en synthétise les forces et irritants et calcule les KPI de satisfaction dans un dashboard Streamlit.</p>
+              <p class="proj-for"><span data-i18n="proj.for">Pour qui :</span> <span data-i18n="proj.verbatim.for">Une équipe CX qui doit savoir quels irritants clients traiter en priorité.</span></p>
+              <div class="tags"><span>Python</span><span>Gemma 4</span><span>Pydantic</span><span>Streamlit</span><span>Plotly</span></div>
+              <div class="proj-links">
+                <a href="https://github.com/Abd2k27/Customer_Verbatims_Analyzer_Quantifier" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://customerverbatimsanalyzerquantifier-a9rrjkplmzgmxvj4bojxxk.streamlit.app/" target="_blank" rel="noopener" data-i18n="proj.live">Démo ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="proj-card" data-modal="proj-fetal" tabindex="0">
+            <div class="proj-content">
+              <span class="proj-domain" data-i18n="proj.fetal.tag">Vision par ordinateur · santé</span>
+              <h4 data-i18n="proj.fetal.title">Classification d'échographies fœtales</h4>
+              <p data-i18n="proj.fetal.desc">EfficientNet-B0 entraîné sur 5 271 images pour identifier les plans anatomiques fœtaux. 92 % de précision, F1 macro 0,91, explicabilité Grad-CAM.</p>
+              <p class="proj-for"><span data-i18n="proj.for">Pour qui :</span> <span data-i18n="proj.fetal.for">Échographistes, comme aide au contrôle qualité des examens.</span></p>
+              <div class="tags"><span>PyTorch</span><span>EfficientNet</span><span>Grad-CAM</span></div>
+              <div class="proj-links">
+                <a href="https://github.com/Abd2k27/fetal-ultrasound-classification" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="proj-card" data-modal="proj-lexi" tabindex="0">
+            <div class="proj-content">
+              <span class="proj-domain" data-i18n="proj.lexi.tag">NLP · RAG</span>
+              <h4 data-i18n="proj.lexi.title">LexiBot : chatbot juridique</h4>
+              <p data-i18n="proj.lexi.desc">Chatbot RAG hybride (sémantique + BM25) sur 200+ pages du Code du numérique béninois, avec décomposition des questions en sous-requêtes.</p>
+              <p class="proj-for"><span data-i18n="proj.for">Pour qui :</span> <span data-i18n="proj.lexi.for">Juristes et entreprises qui cherchent vite la bonne disposition légale.</span></p>
+              <div class="tags"><span>ChromaDB</span><span>BM25</span><span>Streamlit</span></div>
+              <div class="proj-links">
+                <a href="https://github.com/Abd2k27/LexiBot---RAG" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Data Analyst -->
+      <div class="proj-group">
+        <h3 class="group-title"><span class="group-dot da"></span><span data-i18n="proj.group.da">Data Analyst · BI & Dataviz</span></h3>
+        <div class="proj-grid">
+          <article class="proj-card" data-modal="proj-asthme" tabindex="0">
+            <img class="proj-thumb" src="assets/project/asthme.jpg" alt="" loading="lazy"/>
+            <div class="proj-content">
+              <span class="proj-domain" data-i18n="proj.asthme.tag">Santé publique</span>
+              <h4 data-i18n="proj.asthme.title">Asthmawatch : asthme, pollens & pollution</h4>
+              <p data-i18n="proj.asthme.desc">Dashboard sur les passages aux urgences pour asthme en France, croisés avec pollens et polluants. Données collectées par scraping, déployé sur AWS avec Docker.</p>
+              <p class="proj-for"><span data-i18n="proj.for">Pour qui :</span> <span data-i18n="proj.asthme.for">Décideurs de santé publique qui veulent anticiper les pics de passages aux urgences.</span></p>
+              <div class="tags"><span>Dash</span><span>Plotly</span><span>Selenium</span><span>Docker</span><span>AWS</span></div>
+              <div class="proj-links">
+                <a href="https://github.com/Abd2k27/asthme-dash" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://sijkhavkmx.eu-west-3.awsapprunner.com/" target="_blank" rel="noopener" data-i18n="proj.live">Démo ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="proj-card" data-modal="proj-immo" tabindex="0">
+            <img class="proj-thumb" src="assets/project/immoviz.jpg" alt="" loading="lazy"/>
+            <div class="proj-content">
+              <span class="proj-domain" data-i18n="proj.immo.tag">Immobilier · géospatial</span>
+              <h4 data-i18n="proj.immo.title">ImmoViz : marché immobilier français</h4>
+              <p data-i18n="proj.immo.desc">Dashboard géospatial interactif : prix au m² par région, département et ville, pour explorer le marché immobilier français.</p>
+              <p class="proj-for"><span data-i18n="proj.for">Pour qui :</span> <span data-i18n="proj.immo.for">Acheteurs et investisseurs qui comparent les prix entre territoires.</span></p>
+              <div class="tags"><span>Streamlit</span><span>Pandas</span><span>Leaflet</span></div>
+              <div class="proj-links">
+                <a href="https://github.com/Abd2k27/ImmoViz" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://immoviz-cgxwo4whbtf8yrhfs7s3ql.streamlit.app/" target="_blank" rel="noopener" data-i18n="proj.live">Démo ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Autres -->
+      <div class="proj-group">
+        <h3 class="group-title"><span class="group-dot other"></span><span data-i18n="proj.group.other">Autres projets</span></h3>
+        <div class="proj-grid">
+          <article class="proj-card" data-modal="proj-melio" tabindex="0">
+            <div class="proj-content">
+              <span class="proj-domain" data-i18n="proj.melio.tag">EdTech · produit</span>
+              <h4 data-i18n="proj.melio.title">Mélio : détection de la détresse scolaire</h4>
+              <p data-i18n="proj.melio.desc">Plateforme de bien-être scolaire : règles métier pour détecter les signaux de détresse et recherche sémantique (RAG) pour orienter vers les bonnes ressources.</p>
+              <p class="proj-for"><span data-i18n="proj.for">Pour qui :</span> <span data-i18n="proj.melio.for">Équipes éducatives qui veulent repérer tôt les élèves en difficulté.</span></p>
+              <div class="tags"><span>NLP</span><span>RAG</span><span>SaaS</span></div>
+              <div class="proj-links">
+                <a href="https://www.melio-soutien.fr/" target="_blank" rel="noopener" data-i18n="proj.website">Site ↗</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- 2. ABOUT CARD -->
-    <section class="card card-about" id="about">
-      <p class="card-label" data-i18n="about.label">// About</p>
-      <h2><span data-i18n="about.h2a">Data Science,</span><br/><span class="accent" data-i18n="about.h2b">Two Fields</span></h2>
-      <p class="card-text" data-i18n="about.text">In Fintech, I industrialize data pipelines in production (dbt, BigQuery, SQL) and build fraud detection and customer scoring models at Nickel (BNP Paribas). In healthcare, I apply deep learning to medical imaging and NLP to clinical data as part of my Master's in Health Data Science (ILIS – Université de Lille). Two domains, one standard: reliable models, clean data, measurable impact.</p>
-      <div class="about-stats">
-        <div class="stat"><span class="stat-num" data-target="7">0</span><span class="stat-lbl" data-i18n="about.stat1">Projects</span></div>
-        <div class="stat"><span class="stat-num" data-target="2">0</span><span class="stat-lbl" data-i18n="about.stat2">Masters</span></div>
-        <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-lbl" data-i18n="about.stat3">Experiences</span></div>
+    <!-- ===== EXPÉRIENCES ===== -->
+    <section class="section container" id="experience">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="exp.label">Expériences</p>
+        <h2 data-i18n="exp.h2">Parcours professionnel</h2>
       </div>
+      <ol class="timeline">
+        <li class="tl-item" data-modal="exp-melio" tabindex="0">
+          <span class="tl-date" data-i18n="exp.melio.date">févr. 2026 – aujourd'hui</span>
+          <div>
+            <h4><span data-i18n="exp.melio.role">Développeur IA</span> · Mélio</h4>
+            <p data-i18n="exp.melio.desc">Fonctionnalités IA pour le soutien des élèves et le climat scolaire.</p>
+          </div>
+        </li>
+        <li class="tl-item" data-modal="exp-nickel" tabindex="0">
+          <span class="tl-date" data-i18n="exp.nickel.date">sept. 2025 – sept. 2026</span>
+          <div>
+            <h4><span data-i18n="exp.nickel.role">Data Analyst CX & Fraude (alternance)</span> · Nickel (BNP Paribas)</h4>
+            <p data-i18n="exp.nickel.desc">30+ modèles dbt alimentant 20+ dashboards, 3 modèles ML anti-fraude sur 50M+ de données, analyse du churn et voix du client.</p>
+          </div>
+        </li>
+        <li class="tl-item" data-modal="exp-singa" tabindex="0">
+          <span class="tl-date" data-i18n="exp.singa.date">avr. 2025 – août 2025</span>
+          <div>
+            <h4><span data-i18n="exp.singa.role">Data Analyst Suivi & Évaluation</span> · SINGA Global</h4>
+            <p data-i18n="exp.singa.desc">Protocoles de mesure d'impact harmonisés sur 5+ pays, reporting automatisé et migration des données vers Salesforce.</p>
+          </div>
+        </li>
+        <li class="tl-item" data-modal="exp-hub" tabindex="0">
+          <span class="tl-date" data-i18n="exp.hub.date">sept. 2022 – juil. 2024</span>
+          <div>
+            <h4><span data-i18n="exp.hub.role">Hub Manager</span> · Epitech Bénin</h4>
+            <p data-i18n="exp.hub.desc">Pilotage du hub d'innovation : 200+ étudiants accompagnés, 10+ projets, hackathon fiscal avec la DGI du Bénin.</p>
+          </div>
+        </li>
+        <li class="tl-item" data-modal="exp-aff" tabindex="0">
+          <span class="tl-date" data-i18n="exp.aff.date">mai 2022 – sept. 2022</span>
+          <div>
+            <h4><span data-i18n="exp.aff.role">Chef de projet IT</span> · Africa Fintech Forum</h4>
+            <p data-i18n="exp.aff.desc">Architecture de la plateforme, constitution de l'équipe IT et suivi des KPI techniques.</p>
+          </div>
+        </li>
+        <li class="tl-item" data-modal="exp-acumen" tabindex="0">
+          <span class="tl-date" data-i18n="exp.agrosfer.date">juil. 2020 – nov. 2020</span>
+          <div>
+            <h4><span data-i18n="exp.agrosfer.role">Assistant chef de projet</span> · Agrosfer</h4>
+            <p data-i18n="exp.agrosfer.desc">Planification des sprints, tests et traitement de données pour une startup AgriTech.</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <!-- 3. PROJECTS CARD -->
-    <section class="card card-projects" id="projects">
-      <p class="card-label" data-i18n="proj.label">// Projects</p>
-      <h2 data-i18n="proj.h2">Featured Work</h2>
-      <div class="projects-list">
-
-        <!-- Featured tier (3 prominent) -->
-        <div class="proj-featured-grid">
-          <article class="proj-item proj-featured" data-modal="proj-finder">
-            <div class="proj-header">
-              <span class="proj-tag" data-i18n="proj.finder.tag">🏆 Master's Thesis</span>
-              <h3 data-i18n="proj.finder.title">Finder Bot - Geolocation AI</h3>
-            </div>
-            <p data-i18n="proj.finder.desc">Hybrid LLM-RAG geolocation assistant. Graph-based spatial reasoning + SAR probability modeling. MIT Licensed.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Python</span><span>LLM</span><span>RAG</span><span>SQLite</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/Finder_bot" target="_blank">GitHub ↗</a><a href="https://abd2k27.github.io/Finder_bot/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item proj-featured" data-modal="proj-fetal">
-            <div class="proj-header">
-              <span class="proj-tag" data-i18n="proj.fetal.tag">🏥 Medical AI</span>
-              <h3 data-i18n="proj.fetal.title">Fetal Ultrasound Classification</h3>
-            </div>
-            <p data-i18n="proj.fetal.desc">EfficientNet-B0 for automated fetal plane identification with Grad-CAM. 99.46% recall on fetal brain.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>PyTorch</span><span>EfficientNet</span><span>Grad-CAM</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/fetal-ultrasound-classification" target="_blank">GitHub ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item proj-featured" data-modal="proj-asthme">
-            <div class="proj-header">
-              <span class="proj-tag" data-i18n="proj.asthme.tag">📊 Public Health</span>
-              <h3 data-i18n="proj.asthme.title">Asthma Dashboard</h3>
-            </div>
-            <p data-i18n="proj.asthme.desc">Interactive dashboard on asthma ER visits, pollen & air pollution in France. Deployed on AWS via Docker.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Dash</span><span>Selenium</span><span>Docker</span><span>AWS</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/asthme-dash" target="_blank">GitHub ↗</a><a href="https://sijkhavkmx.eu-west-3.awsapprunner.com/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Secondary tier -->
-        <div class="proj-row">
-          <article class="proj-item" data-modal="proj-lexi">
-            <div class="proj-header"><span class="proj-tag" data-i18n="proj.lexi.tag">NLP / RAG</span><h3 data-i18n="proj.lexi.title">LexiBot - Legal Chatbot</h3></div>
-            <p data-i18n="proj.lexi.desc">Hybrid semantic + BM25 RAG over 200+ pages of legal PDF. Multi-query decomposition.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Streamlit</span><span>ChromaDB</span><span>BM25</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/LexiBot---RAG" target="_blank">GitHub ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item" data-modal="proj-immo">
-            <div class="proj-header"><span class="proj-tag" data-i18n="proj.immo.tag">Data Viz</span><h3 data-i18n="proj.immo.title">ImmoViz - Real Estate</h3></div>
-            <p data-i18n="proj.immo.desc">Interactive geospatial dashboard for French real estate exploration.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Streamlit</span><span>Leaflet</span><span>Pandas</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/ImmoViz" target="_blank">GitHub ↗</a><a href="https://immoviz-cgxwo4whbtf8yrhfs7s3ql.streamlit.app/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item" data-modal="proj-melio">
-            <div class="proj-header"><span class="proj-tag" data-i18n="proj.melio.tag">AI / EdTech</span><h3 data-i18n="proj.melio.title">Mélio - AI Support</h3></div>
-            <p data-i18n="proj.melio.desc">AI features for student emotional support and school climate optimization.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>AI</span><span>NLP</span><span>SaaS</span></div>
-              <div class="proj-links"><a href="https://www.melio-soutien.fr/" target="_blank">Website ↗</a></div>
-            </div>
-          </article>
-          <article class="proj-item" data-modal="proj-verbatim">
-            <div class="proj-header"><span class="proj-tag" data-i18n="proj.verbatim.tag">🤖 NLP / LLM Pipeline</span><h3 data-i18n="proj.verbatim.title">Customer Verbatims Analyzer</h3></div>
-            <p data-i18n="proj.verbatim.desc">Asynchronous LLM pipeline (Gemma 4 via Ollama Cloud) for ingesting customer reviews, semantic theme harmonization, and qualitative synthesis. Features a real-time Streamlit dashboard.</p>
-            <div class="proj-footer">
-              <div class="proj-tech"><span>Python</span><span>Streamlit</span><span>Ollama</span><span>Gemma 4</span></div>
-              <div class="proj-links"><a href="https://github.com/Abd2k27/Customer_Verbatims_Analyzer_Quantifier" target="_blank">GitHub ↗</a><a href="https://customerverbatimsanalyzerquantifier-a9rrjkplmzgmxvj4bojxxk.streamlit.app/" target="_blank">Live ↗</a></div>
-            </div>
-          </article>
-        </div>
-
+    <!-- ===== FORMATION ===== -->
+    <section class="section container" id="education">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="edu.label">Formation</p>
+        <h2 data-i18n="edu.h2">Diplômes</h2>
       </div>
-    </section>
-
-    <!-- 4. EXPERIENCE CARD -->
-    <section class="card card-exp" id="experience">
-      <p class="card-label" data-i18n="exp.label">// 💼 Experience</p>
-      <div class="timeline">
-        <div class="tl-item" data-modal="exp-melio">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">Feb 2026 - Present</span>
-            <h3><a href="https://www.melio-soutien.fr/" target="_blank" class="tl-company">AI Developer - Mélio ↗</a></h3>
-            <p data-i18n="exp.melio.desc">AI-driven student support & school climate</p>
-            <span class="tl-metric" data-i18n="exp.melio.metric">AI features · school well-being platform</span>
-          </div>
+      <div class="edu-grid">
+        <div class="edu-card" data-modal="edu-m2" tabindex="0">
+          <span class="tl-date">2024 – 2026</span>
+          <h4 data-i18n="edu.m2.title">Master Data Science en Santé</h4>
+          <p>ILIS, Université de Lille</p>
         </div>
-        <div class="tl-item" data-modal="exp-nickel">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">Sept 2025 - Present</span>
-            <h3><a href="https://nickel.eu/fr" target="_blank" class="tl-company">Data Analyst CX & Fraude - Nickel ↗</a></h3>
-            <p data-i18n="exp.nickel.desc">Customer Experience analytics</p>
-            <span class="tl-metric" data-i18n="exp.nickel.metric">3M+ customers · CX dashboards</span>
-          </div>
+        <div class="edu-card" data-modal="edu-epitech" tabindex="0">
+          <span class="tl-date">2022 – 2024</span>
+          <h4 data-i18n="edu.m1.title">Master Transformation Digitale</h4>
+          <p>Epitech</p>
         </div>
-        <div class="tl-item" data-modal="exp-singa">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">Apr - Aug 2025</span>
-            <h3><a href="https://wearesinga.org/" target="_blank" class="tl-company">Data Analyst S&E - SINGA ↗</a></h3>
-            <p data-i18n="exp.singa.desc">Monitoring & Evaluation</p>
-            <span class="tl-metric" data-i18n="exp.singa.metric">Impact measurement · refugee entrepreneurship</span>
-          </div>
-        </div>
-        <div class="tl-item" data-modal="exp-hub">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">2022 - 2024</span>
-            <h3><a href="https://epitech.africa/" target="_blank" class="tl-company">Hub Manager - Epitech Benin ↗</a></h3>
-            <p data-i18n="exp.hub.desc">Innovation hub management</p>
-            <span class="tl-metric" data-i18n="exp.hub.metric">200+ students · 3 innovation programs</span>
-          </div>
-        </div>
-        <div class="tl-item" data-modal="exp-aff">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">May - Sep 2022</span>
-            <h3><a href="https://africafintechforum.net/" target="_blank" class="tl-company">IT PM - Africa Fintech Forum ↗</a></h3>
-            <p data-i18n="exp.aff.desc">Platform architecture & team coordination</p>
-            <span class="tl-metric" data-i18n="exp.aff.metric">Platform for 50+ stakeholders</span>
-          </div>
-        </div>
-        <div class="tl-item" data-modal="exp-acumen">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">Jul - Nov 2020</span>
-            <h3><a href="https://agrosfer.co/" target="_blank" class="tl-company">Asst. PM - Agrosfer ↗</a></h3>
-            <p data-i18n="exp.agrosfer.desc">AgriTech sprint planning & data processing</p>
-            <span class="tl-metric" data-i18n="exp.agrosfer.metric">AgriTech · MVP delivery</span>
-          </div>
+        <div class="edu-card" data-modal="edu-bsc" tabindex="0">
+          <span class="tl-date">2019 – 2022</span>
+          <h4 data-i18n="edu.bsc.title">Bachelor Expertise Informatique</h4>
+          <p>Epitech</p>
         </div>
       </div>
     </section>
 
-    <!-- 5. EDUCATION CARD - beside Experience (span 1 fills the gap) -->
-    <section class="card card-edu" id="journey">
-      <p class="card-label" data-i18n="edu.label">// 🎓 Education</p>
-      <div class="timeline">
-        <div class="tl-item" data-modal="edu-m2">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">2024 - 2026</span>
-            <h3>Master in Health Data Science</h3>
-            <p>Université de Lille - ILIS</p>
-          </div>
+    <!-- ===== COMPÉTENCES ===== -->
+    <section class="section container" id="skills">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="skills.label">Compétences</p>
+        <h2 data-i18n="skills.h2">Boîte à outils</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4 data-i18n="skills.data">Data & Analytics Engineering</h4>
+          <div class="tags"><span>SQL</span><span>Python</span><span>Pandas</span><span>dbt</span><span>BigQuery</span><span>Databricks</span><span>GCP</span><span>AWS</span><span>Docker</span><span>Git</span></div>
         </div>
-        <div class="tl-item" data-modal="edu-epitech">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">2022 - 2024</span>
-            <h3>Master in Digital Transformation</h3>
-            <p>Epitech</p>
-          </div>
+        <div class="skill-group">
+          <h4 data-i18n="skills.ml">Machine Learning & IA générative</h4>
+          <div class="tags"><span>Scikit-learn</span><span>XGBoost</span><span>PyTorch</span><span>LLM</span><span>RAG</span><span>Prompt engineering</span><span>Ollama</span><span>R</span></div>
         </div>
-        <div class="tl-item" data-modal="edu-bsc">
-          <span class="tl-dot"></span>
-          <div>
-            <span class="tl-date">2019 - 2022</span>
-            <h3>Bachelor in IT Expertise</h3>
-            <p>Epitech - Software Engineering</p>
-          </div>
+        <div class="skill-group">
+          <h4 data-i18n="skills.bi">BI & Dataviz</h4>
+          <div class="tags"><span>Power BI</span><span>Looker Studio</span><span>Tableau</span><span>Streamlit</span><span>Dash / Plotly</span><span>Excel</span></div>
+        </div>
+        <div class="skill-group">
+          <h4 data-i18n="skills.method">Méthodes & conformité</h4>
+          <div class="tags"><span data-i18n="skills.m1">RGPD / données de santé</span><span data-i18n="skills.m2">Cadrage fonctionnel</span><span>Agile / Scrum</span><span>Jira</span><span data-i18n="skills.m3">Conduite du changement</span></div>
         </div>
       </div>
+      <p class="langs" data-i18n="skills.langs">Langues : français (natif), anglais (B2 professionnel)</p>
     </section>
 
-    <!-- 6. TECH STACK CARD - full width row -->
-    <section class="card card-stack" id="stack">
-      <p class="card-label" data-i18n="stack.label">// Tech Stack</p>
-      <h2 data-i18n="stack.h2">Tools I Use</h2>
-      <div class="stack-grid">
-        <a class="stack-chip" href="https://docs.python.org/3/" target="_blank"><img src="./assets/images/pythonlogo.png" alt="Python"/><span>Python</span></a>
-        <a class="stack-chip" href="https://www.r-project.org/other-docs.html" target="_blank"><img src="./assets/images/Rlogo.png" alt="R"/><span>R</span></a>
-        <a class="stack-chip" href="https://www.postgresql.org/docs/" target="_blank"><img src="./assets/images/sqllogo.png" alt="SQL"/><span>SQL</span></a>
-        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"><img src="./assets/images/jslogo.png" alt="JS"/><span>JavaScript</span></a>
-        <a class="stack-chip" href="https://docs.docker.com/" target="_blank"><img src="./assets/images/docker.svg" alt="Docker"/><span>Docker</span></a>
-        <a class="stack-chip" href="https://docs.aws.amazon.com/" target="_blank"><img src="./assets/images/aws.webp" alt="AWS"/><span>AWS</span></a>
-        <a class="stack-chip" href="https://git-scm.com/doc" target="_blank"><img src="./assets/images/gitlogo.png" alt="Git"/><span>Git</span></a>
-        <a class="stack-chip" href="https://docs.github.com/" target="_blank"><img src="./assets/images/github.svg" alt="GitHub"/><span>GitHub</span></a>
-        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/HTML" target="_blank"><img src="./assets/images/htmllogo.png" alt="HTML"/><span>HTML</span></a>
-        <a class="stack-chip" href="https://developer.mozilla.org/docs/Web/CSS" target="_blank"><img src="./assets/images/csslogo.png" alt="CSS"/><span>CSS</span></a>
-        <a class="stack-chip" href="https://learn.microsoft.com/en-us/power-bi/" target="_blank"><img src="./assets/images/powerbi.svg" alt="Power BI"/><span>Power BI</span></a>
-        <a class="stack-chip" href="https://cloud.google.com/docs" target="_blank"><img src="./assets/images/gcp.svg" alt="GCP"/><span>GCP</span></a>
-        <a class="stack-chip" href="https://docs.getdbt.com/" target="_blank"><img src="./assets/images/dbt.svg" alt="dbt"/><span>dbt</span></a>
-        <a class="stack-chip" href="https://docs.anthropic.com/en/docs/claude-code" target="_blank"><img src="./assets/images/claude.svg" alt="Claude Code"/><span>Claude Code</span></a>
-        <a class="stack-chip" href="https://cloud.google.com/gemini/docs/codeassist/overview" target="_blank"><img src="./assets/images/gemini.svg" alt="Gemini Code Assist"/><span>Gemini Code Assist</span></a>
-      </div>
-    </section>
-
-    <!-- 7. CONTACT / BOOKING CARD -->
-    <section class="card card-contact" id="contact">
-      <div class="contact-left">
-        <p class="card-label" data-i18n="contact.label">// Contact</p>
-        <h2><span data-i18n="contact.h2a">Let's Work</span><br/><span class="accent" data-i18n="contact.h2b">Together</span></h2>
-        <p class="card-text" data-i18n="contact.desc">Open to data science roles, research collaborations, and consulting missions in health tech or fintech.</p>
-        <div class="social-row">
-          <a href="https://www.linkedin.com/in/wahabdossou/" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a href="https://github.com/Abd2k27" target="_blank" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
-          <a href="mailto:dossouabdou@gmail.com" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg></a>
+    <!-- ===== CONTACT ===== -->
+    <section class="section container" id="contact">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow" data-i18n="contact.label">Contact</p>
+          <h2 data-i18n="contact.h2">Travaillons ensemble</h2>
+          <p class="lead" data-i18n="contact.desc">Ouvert aux postes et missions de Consultant Data & IA, notamment en Fintech, en santé et sur des sujets à impact.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary btn-lg" href="mailto:dossouabdou@gmail.com">dossouabdou@gmail.com</a>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/wahabdossou/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://github.com/Abd2k27" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="./assets/Abdou_DOSSOU_CV.pdf" target="_blank" rel="noopener" data-i18n="contact.cv">CV (PDF) ↗</a>
+          </div>
         </div>
       </div>
-      <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-        <input type="text" name="name" data-i18n-placeholder="contact.name" placeholder="Your Name" required/>
-        <input type="email" name="email" data-i18n-placeholder="contact.email" placeholder="Your Email" required/>
-        <textarea name="message" data-i18n-placeholder="contact.message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="btn-ink" data-i18n="contact.btn">Send Message →</button>
-      </form>
     </section>
 
   </main>
 
-  <!-- ===== MODAL OVERLAY ===== -->
-  <div class="modal-overlay" id="modal-overlay">
-    <div class="modal">
-      <button class="modal-close" id="modal-close">✕</button>
-      <span class="modal-tag" id="modal-tag"></span>
+  <footer class="footer container">
+    <p>&copy; <span id="year">2026</span> Abdou Wahab Dossou · Consultant Data & IA</p>
+  </footer>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Fermer">✕</button>
+      <span class="proj-domain" id="modal-tag"></span>
       <h3 id="modal-title"></h3>
       <span class="modal-date" id="modal-date"></span>
       <div class="modal-body" id="modal-body"></div>
-      <div class="modal-skills" id="modal-skills"></div>
+      <div class="tags" id="modal-skills"></div>
     </div>
   </div>
 
-  <footer class="footer"><p>&copy; <span id="datee"></span> Abdou Wahab Dossou</p></footer>
   <script src="js/script.js"></script>
 </body>
 </html>
